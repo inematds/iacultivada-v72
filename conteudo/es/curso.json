@@ -6,7 +6,7 @@
   "sub": "No se programa, se cultiva",
   "volta": {
     "t": "Página del proyecto IA Cultivada",
-    "href": "https://inematds.github.io/iacultivada/"
+    "href": "https://inematds.github.io/iacultivada/es/"
   },
   "lado_card": {
     "rot": "Listo para descargar",
@@ -15,7 +15,7 @@
     "link": "Abrir los kits",
     "href": "https://inematds.github.io/iacultivada/kits/"
   },
-  "rodape": "INEMA.CLUB · contenido abierto y gratuito · formato INEMA Learning v7.2 · <a href=\"https://inematds.github.io/iacultivada/\">Proyecto IA Cultivada</a> · <a href=\"https://github.com/inematds/iacultivada\">repositorio con kits, skills y paquetes</a> · <a href=\"https://inema.club/\">inema.club</a> · <a href=\"https://www.inema.club/aprender-inteligencia-artificial/\">Guía: cómo aprender inteligencia artificial</a>",
+  "rodape": "INEMA.CLUB · contenido abierto y gratuito · formato INEMA Learning v7.2 · <a href=\"https://inematds.github.io/iacultivada/es/\">Proyecto IA Cultivada</a> · <a href=\"https://github.com/inematds/iacultivada\">repositorio con kits, skills y paquetes</a> · <a href=\"https://inema.club/\">inema.club</a> · <a href=\"https://www.inema.club/aprender-inteligencia-artificial/\">Guía: cómo aprender inteligencia artificial</a>",
   "videos": {
     "iacultivada": {
       "titulo": "IA Cultivada: por qué tu IA repite el mismo error",

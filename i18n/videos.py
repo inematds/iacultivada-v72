@@ -16,5 +16,9 @@ for lang in ("en", "es"):
     v["vtt"] = f"assets/vtt/iacultivada-{lang}.vtt"
     v["duracao"] = DUR[lang]
     v["pagina"] = f"https://inematds.github.io/iacultivada/videos/{lang}/"
+    # links de volta para a página do projeto no mesmo idioma (o tradutor não mexe em href)
+    proj = "https://inematds.github.io/iacultivada/"
+    c["volta"]["href"] = f"{proj}{lang}/"
+    c["rodape"] = c["rodape"].replace(f'href="{proj}"', f'href="{proj}{lang}/"')
     f.write_text(json.dumps(c, ensure_ascii=False, indent=2) + "\n")
     print(f"{lang}: vídeo → {v['mp4']}")
