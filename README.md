@@ -35,4 +35,10 @@ python3 gerar.py && python3 gerar.py --lang en && python3 gerar.py --lang es
 python3 validar.py --links
 ```
 
+## Mais no INEMA.CLUB
+
+- [Ficha completa deste curso](https://www.inema.club/cursos/328-ia-cultivada-curso-em-8-aulas-faca-o-seu-agente-melhorar-a-cada-semana/)
+- [Guia: como aprender inteligência artificial](https://www.inema.club/aprender-inteligencia-artificial/)
+- [Todos os cursos](https://www.inema.club/cursos/)
+
 Conteúdo educacional aberto e gratuito do [INEMA.CLUB](https://inema.club).
