@@ -1,0 +1,272 @@
+{
+  "slug": "vida-pessoal",
+  "num": 4,
+  "menu": "Personal",
+  "titulo": "First garden: personal life",
+  "titulo_curto": "Personal life",
+  "minutos": 15,
+  "lead": "Most people use AI as a question machine: open it, ask, copy, close. It's like hiring a brilliant consultant and wiping their memory every morning. In personal life, cultivation is cheap: three or four text files and twenty minutes a week.",
+  "objetivo": "start personal cultivation with one function, an About me file, three rules and the 20-minute weekly review.",
+  "competencias": [
+    "escrever-contexto-pessoal",
+    "definir-uma-funcao-por-vez",
+    "fazer-revisao-semanal"
+  ],
+  "aprende": [
+    {
+      "icone": "usuario",
+      "t": "Write a one-page About me"
+    },
+    {
+      "icone": "alvo",
+      "t": "Pick one function at a time"
+    },
+    {
+      "icone": "relogio",
+      "t": "The 20-minute weekly review"
+    },
+    {
+      "icone": "calendario",
+      "t": "The 30-day plan"
+    }
+  ],
+  "hero_alt": "Person at the kitchen table in the morning writing in a notebook next to the laptop.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "Personal cultivation",
+      "sub": "Three files and one habit. Click each part.",
+      "nos": [
+        {
+          "icone": "usuario",
+          "titulo": "You",
+          "sub": "Pick one function",
+          "detalhe": "One role at a time: writing reviewer, study coach, spending analyst, weekly planner. Not \"does everything\"."
+        },
+        {
+          "icone": "arquivo",
+          "titulo": "About me",
+          "sub": "Context",
+          "detalhe": "One page: who you are, life stage, goals for the year, limits on time, money and health, values, and what you hate. One good page is worth more than twenty dumped in."
+        },
+        {
+          "icone": "escudo",
+          "titulo": "Rules",
+          "sub": "Three, at first",
+          "detalhe": "E.g.: \"never decide for me on money and health; give me options\", \"be direct, no praise\", \"answer in English\"."
+        },
+        {
+          "icone": "memoria",
+          "titulo": "Memory",
+          "sub": "It keeps",
+          "detalhe": "Preferences it has discovered, what has already been tried, what worked. You delete whatever is no longer true."
+        },
+        {
+          "icone": "relogio",
+          "titulo": "Weekly review",
+          "sub": "20 minutes",
+          "forte": true,
+          "detalhe": "Read the memory, write three lines in the failure log, fix it in the file, and clean up the memory. This is what turns the chat into cultivation."
+        }
+      ],
+      "volta": "The week's correction becomes a rule or context, and next week starts from there",
+      "legenda": "Someone who does the review for eight weeks ends up with an AI that doesn't look like anyone else's."
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Five gardens that pay off fast",
+      "sub": "Pick one to start.",
+      "passos": [
+        {
+          "titulo": "Decisions",
+          "texto": [
+            "Role: an advisor who doesn't decide. Context: your criteria and past decisions with their outcomes. Rule: always present the opposing option.",
+            "Over time, it remembers your own patterns: \"last time you picked the cheapest and regretted it\"."
+          ]
+        },
+        {
+          "titulo": "Money",
+          "texto": [
+            "Role: spending analyst. Tool: a spreadsheet exported from your bank. Rule: never move money, only show it.",
+            "Spending categories and patterns show up that you had never seen."
+          ]
+        },
+        {
+          "titulo": "Study",
+          "texto": [
+            "Role: tutor. Examples: one explanation that \"clicked\" and one that didn't. Assessment: it asks, you answer, it notes where you get stuck.",
+            "The memory becomes the map of your gaps."
+          ]
+        },
+        {
+          "titulo": "Writing",
+          "texto": [
+            "Role: an editor with your voice. Examples: five of your texts. Rule: don't change the tone, only clarity.",
+            "After a month, the first draft comes out almost ready. Health and routine follow the same logic: suggest and ask your doctor, never prescribe."
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Templates for your folder",
+      "sub": "Copy into SOBRE-MIM.md, REGRAS.md, and the review note.",
+      "blocos": [
+        {
+          "rot": "SOBRE-MIM.md",
+          "icone": "usuario",
+          "conteudo": "# About me — <name>          reviewed on <date>\n\nWho I am: \nThis year's goals: 1)  2)  3) \nConstraints (time, money, health): \nHow I like to work: direct, no praise, English, short lists\nWhat I hate: \nDecisions already made (don't reopen): "
+        },
+        {
+          "rot": "REGRAS.md",
+          "icone": "escudo",
+          "conteudo": "# Rules — role: <e.g.: writing reviewer>\n\n1. Never decide for me on money or health; present options.\n2. Be direct, no praise.\n3. Answer in English.\n\n# Never\n- third-party data or passwords in this file"
+        },
+        {
+          "rot": "Weekly review (20 min)",
+          "icone": "relogio",
+          "conteudo": "## Review — week of <date>\n1. I read MEMORIA.md: what did it note that's new?\n2. Three lines in FALHAS.md: date | what went wrong | smallest fix | was context, a rule, or an example missing?\n3. I fixed it IN THE FILE (not in the conversation): \n4. I deleted from memory what is no longer true: "
+        }
+      ]
+    },
+    {
+      "tipo": "passos",
+      "titulo": "30-day plan",
+      "sub": "One week per tab.",
+      "passos": [
+        {
+          "titulo": "Week 1",
+          "texto": [
+            "Write About me (one page). Pick a role. Set three rules."
+          ]
+        },
+        {
+          "titulo": "Week 2",
+          "texto": [
+            "Use it every day in the same role. Gather five good examples. Start the failure log."
+          ]
+        },
+        {
+          "titulo": "Week 3",
+          "texto": [
+            "First real weekly review. Edit the context and rules. Create the Memory file."
+          ]
+        },
+        {
+          "titulo": "Week 4",
+          "texto": [
+            "Add one tool (calendar or spreadsheet). Measure: time saved and how many times you redid things. Decide whether to open a second role."
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Practice",
+      "sub": "This week.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "1 · About me and three rules",
+          "min": "25 min",
+          "texto": "Write SOBRE-MIM.md and REGRAS.md with a single role. The <a href=\"https://inematds.github.io/iacultivada/kits/\">personal kit</a> has the files with a fictional example.",
+          "pronto": "About me fits on one page, the role is written in one sentence, and there are exactly three rules."
+        },
+        {
+          "id": "e2",
+          "titulo": "2 · The first weekly review",
+          "min": "20 min",
+          "dias": 7,
+          "texto": "Use the AI in the same role for one week, loading the files at the start. At the end, do the review using the template above.",
+          "pronto": "FALHAS.md has at least three lines, and at least one of them turned into a change in a file (rule, context, or example)."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Quick quiz",
+      "sub": "4 questions.",
+      "perguntas": [
+        {
+          "p": "You've explained for the third time that you want answers in short bullet points. What do you do?",
+          "opcoes": [
+            "Explain again, with more emphasis",
+            "Write a rule in the file",
+            "Switch models"
+          ],
+          "certa": 1,
+          "ref": "codigo",
+          "explica": "If you've explained the same thing three times, a rule is missing. Fixing it in the conversation disappears in the next session."
+        },
+        {
+          "p": "What's the right size for About me?",
+          "opcoes": [
+            "One good page",
+            "Everything you have: twenty pages",
+            "One line"
+          ],
+          "certa": 0,
+          "ref": "diagrama",
+          "explica": "Too much context becomes clutter. One good page is worth more than twenty dumped in."
+        },
+        {
+          "p": "In the \"spending analyst\" role, which rule is essential?",
+          "opcoes": [
+            "Pay bills on time automatically",
+            "Never move money, only show it",
+            "Invest whatever is left over"
+          ],
+          "certa": 1,
+          "ref": "passos",
+          "explica": "The AI proposes, you decide, especially on money and health. Delegating judgment is the first trap."
+        },
+        {
+          "p": "What goes into the context file deserves care because...",
+          "opcoes": [
+            "it goes to the model provider",
+            "it gets too heavy for the computer",
+            "AI forgets within a week"
+          ],
+          "certa": 0,
+          "ref": "diagrama",
+          "explica": "Privacy: what goes into the context goes to the provider. Think before you write third-party data or secrets.",
+          "cert": true
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Summary",
+      "itens": [
+        {
+          "t": "One role",
+          "texto": "One role at a time, never \"does everything\"."
+        },
+        {
+          "t": "Three files",
+          "texto": "About me, rules, and memory, with the failure log alongside."
+        },
+        {
+          "t": "20 minutes a week",
+          "texto": "The fix goes into the file, not into the conversation."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Going further",
+      "links": [
+        {
+          "t": "Cultivated AI in personal life (full text)",
+          "href": "https://github.com/inematds/iacultivada/blob/main/conteudo/01-vida-pessoal.md",
+          "icone": "arquivo"
+        },
+        {
+          "t": "Personal kit to download",
+          "href": "https://inematds.github.io/iacultivada/kits/",
+          "icone": "baixar"
+        }
+      ]
+    }
+  ]
+}

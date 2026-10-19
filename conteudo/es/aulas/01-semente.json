@@ -1,0 +1,308 @@
+{
+  "slug": "semente",
+  "num": 1,
+  "menu": "Concepto",
+  "titulo": "La semilla y el jardín: por qué la IA se cultiva",
+  "titulo_curto": "La semilla y el jardín",
+  "minutos": 14,
+  "lead": "Nadie escribe, línea por línea, la capacidad de un modelo para programar o planificar. Los laboratorios crean las condiciones y las capacidades emergen. Tú haces lo mismo en otra escala: el modelo llega listo, y lo que tú cultivas es el entorno que lo rodea.",
+  "objetivo": "separar lo que cultiva el laboratorio (el modelo) de lo que cultivas tú (el agente) y explicar el ciclo que hace que el agente mejore.",
+  "competencias": [
+    "distinguir-modelo-y-agente",
+    "explicar-ciclo-de-cultivo",
+    "reconocer-limites-de-la-metafora"
+  ],
+  "aprende": [
+    {
+      "icone": "chip",
+      "t": "Por qué el modelo es la semilla y no cambia con el uso"
+    },
+    {
+      "icone": "camadas",
+      "t": "Lo que tú cultivas: el envoltorio alrededor del modelo"
+    },
+    {
+      "icone": "seta",
+      "t": "El ciclo que convierte el error en un mejor agente"
+    },
+    {
+      "icone": "x",
+      "t": "Dónde se rompe la metáfora del jardín"
+    }
+  ],
+  "hero_alt": "Una semilla germinando en la tierra junto a un chip de computadora.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "El ciclo del cultivo",
+      "sub": "Cada vuelta es una cosecha. Haz clic en cada etapa.",
+      "nos": [
+        {
+          "icone": "lista",
+          "titulo": "Proceso",
+          "sub": "Lo que hay que hacer",
+          "detalhe": "Todo empieza con un proceso real: calificar leads, organizar la semana, agendar citas. Sin un proceso definido, no hay nada que evaluar después."
+        },
+        {
+          "icone": "robo",
+          "titulo": "Agente",
+          "sub": "Modelo + entorno",
+          "detalhe": "El agente es el modelo (fijo, del laboratorio) más el entorno que tú escribiste: función, contexto, herramientas, reglas, ejemplos y memoria.",
+          "itens": [
+            {
+              "icone": "chip",
+              "t": "Modelo: pesos congelados"
+            },
+            {
+              "icone": "arquivo",
+              "t": "Entorno: archivos tuyos"
+            }
+          ]
+        },
+        {
+          "icone": "play",
+          "titulo": "Ejecución",
+          "sub": "Él trabaja",
+          "detalhe": "El agente ejecuta la tarea con el entorno de ese momento. Aquí es donde se detiene la mayoría: lo usa, le gusta o no le gusta, y empieza de nuevo."
+        },
+        {
+          "icone": "check",
+          "titulo": "Resultado",
+          "sub": "Lo que salió",
+          "detalhe": "Lo que se entregó. Puede verse bien y estar equivocado: un texto fluido no es un texto correcto."
+        },
+        {
+          "icone": "grafico",
+          "titulo": "Evaluación",
+          "sub": "¿Salió bien?",
+          "detalhe": "Alguien lo mide: correcto, parcial o incorrecto, y por qué. Sin evaluación, el agente repite el mismo error con la misma confianza.",
+          "forte": true
+        },
+        {
+          "icone": "caneta",
+          "titulo": "Retroalimentación",
+          "sub": "Cambia el archivo",
+          "detalhe": "La evaluación se convierte en un cambio concreto en el entorno: una regla nueva, un ejemplo, un límite. En el archivo, no en la conversación.",
+          "forte": true
+        }
+      ],
+      "volta": "Agente mejor: la próxima ejecución parte de un entorno ajustado",
+      "legenda": "Antes, programábamos el comportamiento. Ahora, programamos el proceso que produce el comportamiento.",
+      "rolagem": true,
+      "rolagem_fim": {
+        "titulo": "Lo que cambia entre una cosecha y otra",
+        "texto": "No es el modelo. Es lo que anotaste sobre dónde se equivocó y lo que ajustaste en el entorno. Los primeros cuatro pasos hacen que el agente funcione; la evaluación y la retroalimentación hacen que mejore.",
+        "curto": "Quien mejora no es la semilla. Es el jardín."
+      }
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Los dos niveles del cultivo",
+      "sub": "El punto que casi todos mezclan.",
+      "passos": [
+        {
+          "titulo": "Nivel 1",
+          "sub": "El laboratorio cultiva el modelo",
+          "texto": [
+            "El entrenamiento, los pesos y la escala ocurren en Anthropic, en OpenAI, en Google, en DeepSeek. Cuesta miles de millones y tú no participas.",
+            "El resultado es la semilla: capacidades que emergieron del entrenamiento, algunas esperadas, otras que sorprendieron incluso a quienes entrenaron."
+          ]
+        },
+        {
+          "titulo": "Nivel 2",
+          "sub": "Tú cultivas el agente",
+          "texto": [
+            "El modelo llega listo y con los pesos congelados. Lo que tú cultivas es todo lo que lo rodea: función, contexto, herramientas, reglas, ejemplos, memoria, evaluación y feedback.",
+            "Ese envoltorio es lo que hace que el mismo modelo sea un practicante confundido o un profesional confiable."
+          ],
+          "exemplo": {
+            "rot": "Consecuencia",
+            "texto": "En uso, el modelo no aprende solo. Cuando dices \"mi IA mejoró\", lo que mejoró fue el jardín. Y el jardín es tuyo."
+          }
+        },
+        {
+          "titulo": "Software × cultivo",
+          "sub": "Qué cambia en el trabajo",
+          "texto": [
+            "En el software tradicional escribes las reglas exactas y sale exactamente lo especificado; el error es un bug en una línea.",
+            "En la IA cultivada escribes las condiciones, observas lo que surge, y el error pide otro ambiente: más contexto, otro ejemplo, una regla nueva."
+          ]
+        },
+        {
+          "titulo": "Tu papel",
+          "sub": "Gestión, no ejecución",
+          "texto": [
+            "No necesitas ser mejor que la IA en la tarea. Necesitas saber crear el ambiente en el que ella produce el resultado correcto.",
+            "El trabajo pasa de ejecutar a definir la función, dar contexto, poner límites, evaluar y dar feedback. Es gestión de personas, aplicada a sistemas."
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "video",
+      "titulo": "Video: por qué tu IA repite el mismo error",
+      "sub": "Diez minutos con Nei sobre el concepto completo, con capítulos y subtítulos.",
+      "chave": "iacultivada"
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Dónde se rompe la metáfora",
+      "sub": "Lee esto antes de entusiasmarte.",
+      "passos": [
+        {
+          "titulo": "No crece solo",
+          "texto": [
+            "La planta crece sola; el agente no. Sin evaluación y feedback, repite el mismo error para siempre."
+          ]
+        },
+        {
+          "titulo": "Inventa frutos",
+          "texto": [
+            "La planta no inventa frutos. El agente puede producir un resultado bonito y equivocado. La evaluación existe por eso."
+          ]
+        },
+        {
+          "titulo": "Da trabajo",
+          "texto": [
+            "Un contexto malo, un ejemplo malo y una regla vaga producen un agente malo. El modelo es el mismo de la competencia; el jardín, no."
+          ]
+        },
+        {
+          "titulo": "No es conversación",
+          "texto": [
+            "\"Dar feedback\" aquí significa editar el ambiente, no conversar hasta que \"entienda\"."
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Dos modelos para empezar",
+      "sub": "Copia y usa en la práctica de abajo.",
+      "blocos": [
+        {
+          "rot": "Pregunta de prueba para tu IA",
+          "icone": "chat",
+          "conteudo": "¿Qué haces diferente hoy en comparación con el mes pasado, y por qué?\nSi no sabes responder con ejemplos, dilo claramente."
+        },
+        {
+          "rot": "Nota: la corrección que se repite",
+          "icone": "arquivo",
+          "conteudo": "# Correcciones que yo repito\n\n| lo que explico de nuevo | cuántas veces | dónde debería vivir (contexto / regla / ejemplo) |\n|---|---|---|\n| ej.: responder en viñetas cortas | 4 | regla |\n|  |  |  |"
+        }
+      ]
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Práctica",
+      "sub": "Empieza midiendo dónde estás.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "1 · Diagnóstico de madurez",
+          "min": "10 min",
+          "texto": "Abre el <a href=\"https://inematds.github.io/iacultivada/diagnostico/\">diagnóstico del proyecto</a> y responde las ocho preguntas pensando en la IA que más usas hoy.",
+          "pronto": "anotaste tu puntuación, el punto por donde empezar y qué kit indicó el diagnóstico."
+        },
+        {
+          "id": "e2",
+          "titulo": "2 · La corrección que se repite",
+          "min": "10 min",
+          "texto": "Recuerda algo que ya le explicaste a la IA tres veces o más (un formato, un tono, un dato). Escríbelo en una nota: qué repites y en cuál de los ocho elementos debería vivir (contexto, regla o ejemplo).",
+          "pronto": "la nota tiene la corrección repetida y el elemento donde va a vivir."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Prueba rápida",
+      "sub": "4 preguntas. La explicación aparece después de tu intento.",
+      "perguntas": [
+        {
+          "p": "Después de un mes de uso, tu IA se equivoca menos. ¿Qué cambió?",
+          "opcoes": [
+            "Los pesos del modelo fueron ajustados por tus conversaciones",
+            "El ambiente alrededor del modelo: contexto, reglas, ejemplos y memoria",
+            "El laboratorio lanzó una versión nueva solo para ti"
+          ],
+          "certa": 1,
+          "ref": "passos",
+          "explica": "En uso, los pesos quedan congelados. Quien aprende es el sistema: los archivos que tú escribes y revisas. El error común es creer que el modelo \"aprendió contigo\"."
+        },
+        {
+          "p": "¿Qué etapa del ciclo se salta la mayoría de las personas?",
+          "opcoes": [
+            "Ejecución",
+            "Evaluación y feedback",
+            "Proceso"
+          ],
+          "certa": 1,
+          "ref": "diagrama",
+          "explica": "Usar y empezar de nuevo es lo habitual. Sin medir el resultado y devolver la corrección al entorno, el ciclo no se cierra y el agente no mejora."
+        },
+        {
+          "p": "¿Qué significa \"dar feedback\" en el cultivo?",
+          "opcoes": [
+            "Conversar con la IA hasta que entienda",
+            "Editar el entorno: regla nueva, ejemplo o límite",
+            "Ponerle estrellas a la respuesta"
+          ],
+          "certa": 1,
+          "ref": "passos",
+          "explica": "El feedback es un cambio concreto en el archivo. Repetir la explicación en la conversación desaparece en la próxima sesión."
+        },
+        {
+          "p": "Dos empresas usan el mismo modelo. ¿Por qué los resultados son tan diferentes?",
+          "opcoes": [
+            "Una pagó un plan más caro",
+            "El jardín alrededor del modelo es diferente",
+            "Es suerte: la IA es impredecible"
+          ],
+          "certa": 1,
+          "ref": "diagrama",
+          "explica": "El modelo está disponible para todos. La diferencia está en el contexto, las reglas, los ejemplos y la evaluación que cada una construyó.",
+          "cert": true
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Resumen",
+      "itens": [
+        {
+          "t": "Semilla y jardín",
+          "texto": "El laboratorio cultiva el modelo; tú cultivas el agente."
+        },
+        {
+          "t": "El ciclo",
+          "texto": "Proceso, agente, ejecución, resultado, evaluación, feedback, agente mejor."
+        },
+        {
+          "t": "En el archivo",
+          "texto": "Feedback es editar el entorno, no repetirlo en la conversación."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para ir más allá",
+      "links": [
+        {
+          "t": "El concepto completo (proyecto IA Cultivada)",
+          "href": "https://github.com/inematds/iacultivada/blob/main/conteudo/00-conceito.md",
+          "icone": "arquivo"
+        },
+        {
+          "t": "Investigación: origen del concepto y críticas, con fuentes",
+          "href": "https://github.com/inematds/iacultivada/blob/main/pesquisa/relatorio-pesquisa.md",
+          "icone": "lupa"
+        },
+        {
+          "t": "Página del video con capítulos",
+          "href": "https://inematds.github.io/iacultivada/videos/",
+          "icone": "video"
+        }
+      ]
+    }
+  ]
+}

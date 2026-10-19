@@ -1,0 +1,299 @@
+{
+  "slug": "escada",
+  "num": 3,
+  "menu": "Escalera",
+  "titulo": "La escalera de madurez: qué es y qué no es IA cultivada",
+  "titulo_curto": "Escalera de madurez",
+  "minutos": 15,
+  "lead": "No toda IA con memoria es cultivada, y no todo agente es cultivado. La mayor parte de lo que hoy se llama IA opera en los dos primeros niveles. La diferencia entre los niveles no es el modelo: es lo que existe a su alrededor.",
+  "objetivo": "clasificar cualquier IA en la escalera de cuatro niveles y decir qué le falta para convertirse en cultivo.",
+  "competencias": [
+    "classificar-maturidade-de-ia",
+    "distinguir-memoria-de-cultivo",
+    "avaliar-arquitetura-cultivavel"
+  ],
+  "aprende": [
+    {
+      "icone": "camadas",
+      "t": "Los cuatro niveles: ejecutora, contextual, agente y cultivada"
+    },
+    {
+      "icone": "memoria",
+      "t": "Por qué la memoria no es aprendizaje"
+    },
+    {
+      "icone": "x",
+      "t": "Lo que parece cultivo y no lo es"
+    },
+    {
+      "icone": "lupa",
+      "t": "La prueba de una pregunta"
+    }
+  ],
+  "hero_alt": "Escalera de piedra en un jardín de cuatro terrazas, de la tierra desnuda al jardín pleno.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "Los cuatro niveles",
+      "sub": "Haz clic en cada nivel para ver el flujo y un ejemplo.",
+      "estilo": "escada",
+      "nos": [
+        {
+          "icone": "chat",
+          "titulo": "1 · Ejecutora",
+          "sub": "pedido → respuesta",
+          "detalhe": "Sin memoria, sin evaluación, sin contexto persistente. Cada interacción empieza de cero. Ej.: chatbot de preguntas frecuentes que devuelve la respuesta más probable y no mejora."
+        },
+        {
+          "icone": "memoria",
+          "titulo": "2 · Contextual",
+          "sub": "pedido → contexto/memoria → respuesta",
+          "detalhe": "Recuerda quién eres y personaliza. Pero si se equivoca diez veces de la misma manera, nadie corrige el entorno. Ej.: asistente que sabe tu nombre, tu cargo y tu agenda."
+        },
+        {
+          "icone": "robo",
+          "titulo": "3 · Agente",
+          "sub": "objetivo → razonamiento → herramientas → acciones",
+          "detalhe": "Razona, elige herramientas y actúa. Sin evaluación, repite errores indefinidamente: es automatización sofisticada. Ej.: agenda reuniones y las marca en el horario equivocado cinco veces seguidas."
+        },
+        {
+          "icone": "check",
+          "titulo": "4 · Cultivada",
+          "sub": "acción → evaluación → feedback → ajuste → nueva ejecución",
+          "forte": true,
+          "detalhe": "Todo lo del agente, más el ciclo completo: cada ejecución se evalúa, los errores se vuelven reglas y la autonomía sube según la consistencia. Los pesos no cambian; cambia el jardín."
+        }
+      ],
+      "legenda": "1→2 añade memoria y contexto. 2→3 añade herramientas y autonomía. 3→4 añade evaluación, feedback y ajuste del entorno.",
+      "dica": "La mayoría de las implementaciones se detiene en el nivel 2 o 3 y lo llama \"IA avanzada\". El cultivo empieza cuando el ciclo se cierra."
+    },
+    {
+      "tipo": "passos",
+      "titulo": "La memoria no es aprendizaje",
+      "sub": "La confusión más común.",
+      "passos": [
+        {
+          "titulo": "Memoria",
+          "sub": "El sistema sabe más",
+          "texto": [
+            "Memoria es personalización y contexto persistente: \"sé que prefieres las reuniones por la mañana\". La próxima conversación parte de una base más rica.",
+            "Pero la forma en que el sistema decide, actúa y se equivoca sigue siendo la misma."
+          ]
+        },
+        {
+          "titulo": "Cultivo",
+          "sub": "El sistema se equivoca menos",
+          "texto": [
+            "Cultivo es cambio de comportamiento con evidencia: ejecuta, se equivoca, registra, analiza, cambia la regla, ejecuta de nuevo y compara."
+          ],
+          "exemplo": {
+            "rot": "Mejora medible",
+            "texto": "La semana pasada: 14/20 aciertos. Esta semana: 18/20. La versión 1.0 tenía 5 reglas; la 1.3 tiene 12, todas surgidas de errores reales."
+          }
+        },
+        {
+          "titulo": "La ilusión",
+          "sub": "Parece que aprendió",
+          "texto": [
+            "El sistema recuerda que no te gustan las reuniones largas y empieza a sugerir 30 minutos. Si tres reuniones de 30 minutos fallan porque el tema no cabía, va a seguir sugiriendo 30.",
+            "El cultivo diría: \"si la agenda tiene más de 3 puntos, sugerir 45 minutos\"."
+          ]
+        },
+        {
+          "titulo": "La prueba",
+          "sub": "Dos preguntas",
+          "texto": [
+            "La memoria responde: \"¿qué sabes sobre mí?\"",
+            "El cultivo responde: \"¿qué haces diferente hoy en comparación con el mes pasado, y por qué?\". Si el sistema solo responde la primera, tiene memoria."
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Lo que parece cultivo y no lo es",
+      "sub": "Funciona, resuelve, pero no evoluciona.",
+      "passos": [
+        {
+          "titulo": "Prompt simple",
+          "texto": [
+            "Respuesta equivocada, reformulas y lo intentas de nuevo. Tú aprendiste a pedir mejor; el sistema sigue igual."
+          ]
+        },
+        {
+          "titulo": "RAG simple",
+          "texto": [
+            "Consultar documentos antes de responder mejora la precisión, pero si se recuperó el documento equivocado nadie lo registra. El sistema no se corrige."
+          ]
+        },
+        {
+          "titulo": "n8n / Make fijo",
+          "texto": [
+            "Pasos definidos que se ejecutan siempre igual. Si cambia el formato del correo, se rompe. Un nodo de LLM en el medio no convierte una automatización en agente."
+          ]
+        },
+        {
+          "titulo": "Agente sin evaluación",
+          "texto": [
+            "Razona, usa herramientas, entrega. Nadie mide si quedó bien. Repite los mismos errores con la misma confianza."
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Ficha de clasificación",
+      "sub": "Copia y completa para cada IA que uses.",
+      "blocos": [
+        {
+          "rot": "classificacao.md",
+          "icone": "lista",
+          "conteudo": "# En qué nivel está mi IA\n\n## <nombre de la herramienta o agente>\nNivel (1 ejecutora / 2 contextual / 3 agente / 4 cultivada): \n¿Tiene memoria entre sesiones? sí / no\n¿Tiene herramientas (actúa, no solo responde)? sí / no\n¿Alguien mide si el resultado fue bueno? sí / no\n¿La evaluación se convierte en un cambio en el entorno? sí / no\n¿El entorno tiene versiones (sé qué cambió y cuándo)? sí / no\n\nPrueba: si mañana se equivoca igual que hoy, ¿qué lo impide?\nRespuesta: \n\nQué falta para el siguiente nivel: "
+        }
+      ]
+    },
+    {
+      "tipo": "passos",
+      "titulo": "La herramienta no se cultiva; la arquitectura sí",
+      "sub": "Mapa del proyecto, septiembre de 2026.",
+      "passos": [
+        {
+          "titulo": "Cultivable",
+          "texto": [
+            "OpenAI Codex + Agents API + Evals, Gemini Enterprise Agent Platform y LangGraph aportan agente, memoria, herramientas y evaluación."
+          ]
+        },
+        {
+          "titulo": "Construible",
+          "texto": [
+            "Claude Code y Agent SDK tienen agente, memoria y herramientas; la evaluación la armas con scripts, pruebas y observabilidad. El ciclo se cierra, solo exige más trabajo."
+          ]
+        },
+        {
+          "titulo": "Parcial",
+          "texto": [
+            "ChatGPT tiene memoria y herramientas, pero la evaluación estructurada y el feedback que cambia el entorno dependen solo de ti."
+          ]
+        },
+        {
+          "titulo": "No cultivable",
+          "texto": [
+            "LLM por API simple y n8n/Make con flujo fijo. El mismo n8n sube de categoría cuando gana agentes, memoria persistente y evaluación: la herramienta es la misma, la arquitectura cambió."
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Práctica",
+      "sub": "Clasifica lo que ya usas.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "1 · Tres IAs en la escalera",
+          "min": "15 min",
+          "texto": "Usa la ficha de clasificación para tres IAs que uses (en el trabajo o en tu vida personal).",
+          "pronto": "las tres fichas tienen el nivel marcado y la línea \"qué falta para el siguiente nivel\" completa."
+        },
+        {
+          "id": "e2",
+          "titulo": "2 · Las dos preguntas",
+          "min": "5 min",
+          "texto": "Hazle a tu IA principal las dos preguntas de la prueba: qué sabe sobre ti y qué hace diferente hoy en comparación con el mes pasado.",
+          "pronto": "anotaste si respondió la segunda con evidencia (un ejemplo concreto de cambio) o no."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Prueba rápida",
+      "sub": "4 preguntas.",
+      "perguntas": [
+        {
+          "p": "Un asistente recuerda tu nombre, cargo y preferencias de agenda, pero agenda la reunión en el horario equivocado todas las semanas. ¿En qué nivel está?",
+          "opcoes": [
+            "1 · Ejecutora",
+            "2 · Contextual",
+            "4 · Cultivada"
+          ],
+          "certa": 1,
+          "ref": "diagrama",
+          "explica": "Personaliza (tiene memoria), pero no hay un ciclo que corrija el error. Memoria sin evaluación es el nivel 2."
+        },
+        {
+          "p": "Un flujo de n8n recibe un correo, llama a un LLM para extraer datos y los guarda en la hoja de cálculo. ¿Es un agente cultivado?",
+          "opcoes": [
+            "Sí, porque tiene LLM",
+            "No: es un flujo fijo, sin razonamiento, evaluación ni ajuste",
+            "Sí, si el modelo es de punta"
+          ],
+          "certa": 1,
+          "ref": "passos",
+          "explica": "Un nodo de LLM en el medio no cambia la arquitectura. Sin evaluación ni feedback, no hay cultivo."
+        },
+        {
+          "p": "¿Qué pregunta separa la memoria del cultivo?",
+          "opcoes": [
+            "¿Qué sabes sobre mí?",
+            "¿Qué haces diferente hoy en comparación con el mes pasado, y por qué?",
+            "¿Qué modelo usas?"
+          ],
+          "certa": 1,
+          "ref": "passos",
+          "explica": "La memoria responde la primera. Solo el sistema cultivado responde la segunda con evidencia."
+        },
+        {
+          "p": "¿Qué hay que añadir para subir del nivel 3 (agente) al 4 (cultivada)?",
+          "opcoes": [
+            "Un modelo más grande",
+            "Más herramientas",
+            "Evaluación, feedback y ajuste del entorno, con una nueva ejecución"
+          ],
+          "certa": 2,
+          "ref": "diagrama",
+          "explica": "Del 3 al 4 lo que entra es el ciclo: medir, corregir el entorno y ejecutar de nuevo comparando. El modelo y las herramientas ya estaban ahí.",
+          "cert": true
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Resumen",
+      "itens": [
+        {
+          "t": "Cuatro niveles",
+          "texto": "Ejecutora, contextual, agente y cultivada."
+        },
+        {
+          "t": "Memoria ≠ cultivo",
+          "texto": "La memoria hace que el sistema sepa más; el cultivo hace que se equivoque menos."
+        },
+        {
+          "t": "La prueba",
+          "texto": "Si mañana te equivocas igual que hoy, ¿qué en el sistema lo impide? Si la respuesta es nada, no es cultivo."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para ir más allá",
+      "links": [
+        {
+          "t": "Escalera de madurez (texto completo)",
+          "href": "https://github.com/inematds/iacultivada/blob/main/conteudo/05-escada-maturidade.md",
+          "icone": "arquivo"
+        },
+        {
+          "t": "La memoria no es aprendizaje",
+          "href": "https://github.com/inematds/iacultivada/blob/main/conteudo/08-memoria-vs-cultivo.md",
+          "icone": "memoria"
+        },
+        {
+          "t": "Mapa de los sistemas actuales",
+          "href": "https://github.com/inematds/iacultivada/blob/main/conteudo/07-mapa-sistemas.md",
+          "icone": "camadas"
+        }
+      ]
+    }
+  ]
+}

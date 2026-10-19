@@ -1,0 +1,36 @@
+{
+  "en": {
+    "IA Cultivada": "Cultivated AI",
+    "cultivo": "cultivation",
+    "cultivar": "cultivate",
+    "jardim": "garden",
+    "semente": "seed",
+    "safra": "harvest cycle",
+    "ficha do agente": "agent profile",
+    "diário de falhas": "failure log",
+    "revisão semanal": "weekly review",
+    "arquivo-mestre": "master file",
+    "Sobre mim": "About me",
+    "pronto quando": "done when",
+    "escada de maturidade": "maturity ladder",
+    "erro grave": "serious error",
+    "gestor de agentes": "agent manager"
+  },
+  "es": {
+    "IA Cultivada": "IA Cultivada",
+    "cultivo": "cultivo",
+    "cultivar": "cultivar",
+    "jardim": "jardín",
+    "semente": "semilla",
+    "safra": "cosecha",
+    "ficha do agente": "ficha del agente",
+    "diário de falhas": "registro de fallos",
+    "revisão semanal": "revisión semanal",
+    "arquivo-mestre": "archivo maestro",
+    "Sobre mim": "Sobre mí",
+    "pronto quando": "listo cuando",
+    "escada de maturidade": "escalera de madurez",
+    "erro grave": "error grave",
+    "gestor de agentes": "gestor de agentes"
+  }
+}

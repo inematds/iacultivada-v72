@@ -1,0 +1,123 @@
+{
+  "slug": "negocios",
+  "num": 8,
+  "menu": "Empresa",
+  "titulo": "Terceiro jardim: a empresa, e o seu plano",
+  "titulo_curto": "Empresa e plano",
+  "minutos": 18,
+  "lead": "Na empresa, cultivar é parar de tratar a IA como software que se programa e passar a tratá-la como capacidade que a organização desenvolve. Quando os projetos falham, o motivo raramente é o modelo: é falta de contexto, de processo e de feedback. Esta aula fecha o curso com o plano datado.",
+  "objetivo": "escolher o primeiro processo da empresa para um agente e sair com um plano datado de 30 ou 90 dias.",
+  "competencias": ["escolher-primeiro-processo", "diagnosticar-falha-de-projeto-de-ia", "planejar-cultivo-com-datas"],
+  "aprende": [
+    {"icone": "alvo", "t": "Escolher o primeiro processo: volume, regra clara, baixo custo de erro"},
+    {"icone": "lupa", "t": "Ler o sintoma de um projeto que falha e achar a correção mínima"},
+    {"icone": "cerebro", "t": "Por que o jardim é o ativo, e não o modelo"},
+    {"icone": "calendario", "t": "Gerar o seu plano com datas"}
+  ],
+  "hero_alt": "Três pessoas numa sala de reunião diante de um quadro com post-its e um gráfico de barras crescente.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "Mesmo modelo, dois jardins",
+      "sub": "O modelo é alugado, compartilhado, substituível. Clique para comparar.",
+      "nos": [
+        {"icone": "chip", "titulo": "Modelo X", "sub": "O mesmo nas duas", "detalhe": "Último lançamento, estado da arte, disponível para qualquer empresa. Não é aqui que está a diferença."},
+        {"icone": "x", "titulo": "Empresa A", "sub": "Erra 30% das vezes", "detalhe": "Sem histórico de execuções, poucos exemplos, nenhuma avaliação estruturada, regras de template, sem registro de falhas nem versões. Quando erra, ajusta o prompt e torce. Se trocar de modelo, volta ao zero.", "itens": [{"icone": "x", "t": "sem avaliação"}, {"icone": "x", "t": "sem versões"}]},
+        {"icone": "check", "titulo": "Empresa B", "sub": "Erra 2% das vezes", "forte": true, "detalhe": "10.000 execuções registradas, 1.200 avaliações estruturadas, 300 regras nascidas de erros reais, 500 exemplos curados, skills testadas e memória organizacional. Se trocar de modelo, o jardim inteiro continua.", "itens": [{"icone": "grafico", "t": "10.000 execuções"}, {"icone": "caneta", "t": "300 regras de erros reais"}, {"icone": "lista", "t": "500 exemplos curados"}]}
+      ],
+      "legenda": "O concorrente pode contratar o mesmo modelo e até a mesma equipe. Não pode copiar 10.000 execuções avaliadas. O jardim é o fosso; o modelo, não.",
+      "dica": "Números do exemplo ilustrativo do projeto (cap. 11): servem para mostrar a escala, não como meta."
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Do sintoma à correção mínima",
+      "sub": "Por que os projetos falham, e o menor conserto.",
+      "passos": [
+        {"titulo": "\"Alucina\"", "sub": "Contexto ausente ou entulhado", "texto": ["Curar a base: menos, melhor, com dono. Não o Drive inteiro."]},
+        {"titulo": "\"Ninguém confia\"", "sub": "Sem avaliação por amostra", "texto": ["Scorecard quinzenal com humano revisando 20 casos."]},
+        {"titulo": "\"Quebrou em produção\"", "sub": "Exemplos só de casos fáceis", "texto": ["Incluir os casos feios e as exceções nos exemplos. E se \"fez algo que não devia\": escrever a lista do proibido e exigir confirmação."]},
+        {"titulo": "\"Parou de melhorar\"", "sub": "Feedback não volta ao ambiente", "texto": ["Ritual: toda falha vira uma linha de regra ou exemplo. E se \"custa mais do que economiza\": um processo, um agente, um indicador."]}
+      ]
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Onde começar, e o que os casos reais ensinam",
+      "sub": "Cada agente nasce no nível 1.",
+      "passos": [
+        {"titulo": "Por área", "texto": ["Vendas: qualificação e pesquisa de leads. Atendimento: triagem e resposta sugerida. Financeiro: conciliação e classificação de lançamentos.", "Marketing: primeira versão dentro do guia de voz. Operações: extração de dados e checagem contra checklist. RH: triagem de currículos contra critérios explícitos."]},
+        {"titulo": "Avaliação", "texto": ["Klarna substituiu centenas de atendentes por IA em 2024, admitiu queda de qualidade em 2025 e voltou a contratar humanos para os casos complexos: corte de custo sem avaliação é cultivo sem colheita.", "O \"workslop\" (pesquisa da HBR): quase metade dos trabalhadores recebe conteúdo de IA que parece bom e não serve."]},
+        {"titulo": "Cultura", "texto": ["Na Shopify, antes de pedir contratação o time mostra por que a IA não resolve: a cultura muda antes da ferramenta.", "O Duolingo anunciou \"IA em primeiro lugar\", sofreu reação pública e recuou: como você comunica o cultivo importa."]},
+        {"titulo": "O gestor de agentes", "texto": ["O cargo que surge não é engenheiro de prompt: é quem escreve fichas, cura contexto, mantém exemplos, lê scorecards e roda o ritual de feedback.", "A empresa que já sabe fazer integração, dar feedback e medir resultado sai na frente."]}
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "O plano de 90 dias da empresa",
+      "sub": "Copie para o documento do projeto e ponha datas.",
+      "blocos": [
+        {"rot": "PLANO-90-DIAS.md", "icone": "calendario", "conteudo": "# Primeiro agente — <processo>          dono: <nome>\n\n## Dias 1–30\n- [ ] Processo com volume, regra clara e baixo custo de erro: \n- [ ] Ficha do agente escrita (função, resultado, dono, três listas de limite)\n- [ ] Contexto curado (produto, cliente ideal, política, glossário)\n- [ ] 20 exemplos anotados, incluindo os feios\n- [ ] Agente no nível 1 (recomenda)\n\n## Dias 31–60\n- [ ] Scorecard rodando (amostra de 20 casos revisada por humano)\n- [ ] Dois rituais de feedback: falhas viram regras e exemplos\n- [ ] Custo por tarefa e taxa de erro medidos\n\n## Dias 61–90\n- [ ] Subir para o nível 2 se o scorecard permitir (90%+, 50+ avaliadas, zero erro grave em 2 semanas)\n- [ ] Método documentado\n- [ ] Segundo processo escolhido\n- [ ] Gestor de agentes nomeado"}
+      ]
+    },
+    {
+      "tipo": "mapa",
+      "titulo": "O mapa do cultivo",
+      "sub": "As quatro entregas principais do curso e o que cada uma deixa pronto. Clique num exercício para ver o \"pronto quando\".",
+      "resultado": {"titulo": "Ao final do curso", "texto": "Um agente seu com ficha, diário de falhas, taxa de acerto medida, uma regra nascida de erro e critério escrito para subir de nível.", "total": "8 exercícios"},
+      "legenda": "Ordem recomendada: cada entrega usa o que a anterior deixou pronto.",
+      "degraus": [
+        {"aula": "oito-elementos", "icone": "arquivo", "quando": "Semana 1", "titulo": "Os arquivos", "sub": "Ficha e os cinco arquivos", "saida": "Agente descrito pelos oito elementos, numa pasta.", "passo": "Comece pela ficha: função em uma frase, dono humano e as três listas de limite. Os outros quatro arquivos podem nascer vazios."},
+        {"aula": "jarvis", "icone": "robo", "quando": "Semana 1 e 2", "titulo": "Uso diário", "sub": "Arquivo-mestre e diário de falhas", "saida": "Agente em uso todo dia, com FALHAS.md e um runbook.", "passo": "Vale para o Jarvis ou para o cultivo pessoal (aula 4): uma função, uso diário, uma linha por erro."},
+        {"aula": "ciclo", "icone": "grafico", "quando": "Semana 3", "titulo": "O ciclo", "sub": "Registro e primeira regra", "saida": "Taxa de acerto da semana e a versão v1.1.", "passo": "Requer uma semana de uso. Três campos por execução; a falha que mais se repetiu vira a primeira regra."},
+        {"aula": "autonomia", "icone": "portao", "quando": "Semana 4", "titulo": "Autonomia", "sub": "Critério escrito", "saida": "Nível atual e números para subir, na ficha.", "passo": "Só depois de ter números. O agente continua no nível 1 até o critério ser verdade."}
+      ]
+    },
+    {
+      "tipo": "gerador",
+      "titulo": "Gere o seu plano com datas",
+      "sub": "Escolha a data de início e quanto tempo você tem por semana. O plano respeita os exercícios que pedem dias de uso real.",
+      "curso": "IA Cultivada",
+      "horas_padrao": 3,
+      "degraus": [
+        {"titulo": "Aula 1 · Conceito e diagnóstico", "aula": "semente"},
+        {"titulo": "Aula 2 · Ficha e cinco arquivos", "aula": "oito-elementos"},
+        {"titulo": "Aula 3 · Escada de maturidade", "aula": "escada"},
+        {"titulo": "Aula 4 · Vida pessoal", "aula": "vida-pessoal"},
+        {"titulo": "Aula 5 · O seu Jarvis", "aula": "jarvis"},
+        {"titulo": "Aula 6 · Fechar o ciclo", "aula": "ciclo"},
+        {"titulo": "Aula 7 · Autonomia por evidência", "aula": "autonomia"}
+      ],
+      "txt": {"titulo": "Plano — IA Cultivada", "inicio": "Início", "ritmo": "Ritmo", "termino": "Término previsto", "ate": "até", "pronto": "pronto quando", "semanas": "semanas", "travou": "## O que errou e a regra que criei", "h": "h por semana", "exs": "exercícios"}
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Teste final",
+      "sub": "4 perguntas sobre o curso inteiro.",
+      "perguntas": [
+        {"p": "Qual processo é o melhor primeiro candidato para um agente na empresa?", "opcoes": ["O mais estratégico, mesmo com regras vagas", "Um com volume, regra clara e baixo custo de erro", "Todos de uma vez, para ganhar escala"], "certa": 1, "ref": "codigo", "explica": "Volume dá dados para avaliar, regra clara dá o que medir, e baixo custo de erro permite aprender. Escopo largo é o \"custa mais do que economiza\"."},
+        {"p": "\"Funcionou no piloto, quebrou em produção.\" Qual a correção mínima?", "opcoes": ["Trocar por um modelo maior", "Incluir os casos feios e as exceções nos exemplos", "Desligar o agente"], "certa": 1, "ref": "passos", "explica": "Exemplo só de caso fácil produz agente que só resolve caso fácil. A correção mínima está no ambiente."},
+        {"p": "A empresa troca o modelo X pelo Y. O que acontece com quem cultivou?", "opcoes": ["Perde tudo e recomeça", "O jardim continua: contexto, regras, exemplos e avaliações passam para o novo modelo", "Precisa treinar o novo modelo do zero"], "certa": 1, "ref": "diagrama", "explica": "O ativo é o jardim, não a semente. Quem só tinha o modelo volta ao zero.", "cert": true},
+        {"p": "Qual frase resume o curso?", "opcoes": ["O melhor modelo vence", "Quem melhora não é a semente, é o jardim", "Autonomia total desde o primeiro dia"], "certa": 1, "ref": "mapa", "explica": "O modelo é o mesmo para todos. O que você escreve, mede e corrige em volta dele é o que melhora, e é seu.", "cert": true}
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "O curso em três frases",
+      "itens": [
+        {"t": "O modelo é a semente", "texto": "Chega pronto e é o mesmo do concorrente. O jardim em volta é seu."},
+        {"t": "Execução sem avaliação gera repetição", "texto": "Diário de falhas, scorecard e regra no arquivo fecham o ciclo."},
+        {"t": "Autonomia por evidência", "texto": "Todo agente nasce no nível 1 e sobe com números, não com confiança."}
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Continue por aqui",
+      "links": [
+        {"t": "IA Cultivada nos negócios (texto completo)", "href": "https://github.com/inematds/iacultivada/blob/main/conteudo/03-negocios.md", "icone": "arquivo"},
+        {"t": "O jardim acumulado como propriedade intelectual", "href": "https://github.com/inematds/iacultivada/blob/main/conteudo/11-jardim-ativo.md", "icone": "cerebro"},
+        {"t": "Pacotes de agentes por área (leads, atendimento, financeiro, marketing)", "href": "https://github.com/inematds/iacultivada/tree/main/pacotes", "icone": "pasta"},
+        {"t": "Kit empresa para baixar", "href": "https://inematds.github.io/iacultivada/kits/", "icone": "baixar"},
+        {"t": "Cursos abertos no INEMA.CLUB", "href": "https://inema.club/", "icone": "seta"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "slug": "ciclo",
+  "num": 6,
+  "menu": "Ciclo",
+  "titulo": "Cerrar el ciclo: registro de fallos y observabilidad",
+  "titulo_curto": "Cerrar el ciclo",
+  "minutos": 17,
+  "lead": "Lo que no se observa no se cultiva. Esta clase acompaña a un agente de atención de una clínica desde el primer error hasta la autonomía supervisada, y muestra lo mínimo que necesitas registrar para cambiar \"creo que mejoró\" por \"mejoró de 88% a 95%\".",
+  "objetivo": "registrar cada ejecución con el mínimo de campos y convertir un error real en una regla nueva, comparando el resultado antes y después.",
+  "competencias": [
+    "registrar-execucoes",
+    "achar-causa-raiz-de-falha",
+    "comparar-versoes-do-agente"
+  ],
+  "aprende": [
+    {
+      "icone": "caneta",
+      "t": "Cómo un error se convierte en regla permanente"
+    },
+    {
+      "icone": "grafico",
+      "t": "Comparar versiones del agente con números"
+    },
+    {
+      "icone": "lista",
+      "t": "Observabilidad mínima: tres campos"
+    },
+    {
+      "icone": "lupa",
+      "t": "Encontrar el patrón de error que vale la pena corregir primero"
+    }
+  ],
+  "hero_alt": "Una recepcionista de clínica revisa la agenda de consultas en la pantalla de al lado de un cuaderno abierto.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "El caso de la clínica, en seis etapas",
+      "sub": "Desplázate para seguirlo. Los números son del caso descrito en el proyecto.",
+      "nos": [
+        {
+          "icone": "pasta",
+          "titulo": "Ambiente inicial",
+          "sub": "Solo sugiere",
+          "detalhe": "Médicos y especialidades, horarios de cada uno, procedimientos y duración, reglas de la clínica y acceso a la agenda. El agente solo sugiere; la recepcionista aprueba cada cita."
+        },
+        {
+          "icone": "x",
+          "titulo": "Primer fallo",
+          "sub": "Semana 3",
+          "detalhe": "El agente agenda a las 19:30 con un médico que no atiende después de las 18:00. La agenda mostraba \"libre\", pero agenda libre no es médico disponible. El fallo se registra con fecha, decisión, resultado y causa raíz."
+        },
+        {
+          "icone": "caneta",
+          "titulo": "Regla nueva",
+          "sub": "En el ambiente, no en la conversación",
+          "forte": true,
+          "detalhe": "\"Antes de sugerir, consultar la agenda Y el horario de atención del médico. Fuera del horario, nunca, aunque la agenda muestre libre.\" Vale desde la próxima ejecución en adelante."
+        },
+        {
+          "icone": "grafico",
+          "titulo": "Evaluación",
+          "sub": "18 de 20",
+          "detalhe": "De las 20 interacciones siguientes, 18 correctas. Los 2 fallos se convierten en dos reglas más: la duración del procedimiento debe caber en el horario, y 15 minutos de intervalo entre consultas."
+        },
+        {
+          "icone": "check",
+          "titulo": "Estabilización",
+          "sub": "20 de 20, dos semanas",
+          "detalhe": "40 interacciones en dos semanas: 20/20 en cada una, cero correcciones de la recepcionista, tiempo de respuesta de 4 minutos a 45 segundos."
+        },
+        {
+          "icone": "seta",
+          "titulo": "Autonomía",
+          "sub": "Ejecuta; el humano ve las excepciones",
+          "forte": true,
+          "detalhe": "Con el historial, el agente pasa a confirmar solo. El humano recibe un informe diario y revisa solo lo que el agente marcó como excepción: horario límite, paciente nuevo, procedimiento largo."
+        }
+      ],
+      "rolagem": true,
+      "rolagem_fim": {
+        "titulo": "Después de 2 meses",
+        "texto": "Reglas: de 5 genéricas a 14 nacidas de fallos reales. 320 ejecuciones registradas, 7 fallos documentados, 97,8% de acierto, versión v1.0 → v1.4. El modelo es el mismo del primer día; si la clínica cambia de modelo, el jardín continúa.",
+        "curto": "Mismo modelo, otro jardín."
+      }
+    },
+    {
+      "tipo": "passos",
+      "titulo": "La diferencia entre dos versiones",
+      "sub": "Lo que muestra la observabilidad (ejemplo del proyecto, 100 ejecuciones en cada versión).",
+      "passos": [
+        {
+          "titulo": "v1.0 · 88%",
+          "sub": "12 fallos, 15 intervenciones",
+          "texto": [
+            "Tres patrones de error: fuera del horario del profesional (5), horario corto para el procedimiento (4) y respuesta ambigua sobre cancelación (3).",
+            "Cada patrón generó una regla nueva: cuatro reglas modificadas."
+          ]
+        },
+        {
+          "titulo": "v1.1 · 95%",
+          "sub": "5 fallos, 6 intervenciones",
+          "texto": [
+            "Los patrones 1 y 2 desaparecieron. El 3 bajó de 3 a 1 ocurrencia.",
+            "Apareció un patrón nuevo: dos procedimientos simultáneos que piden el mismo consultorio. El ciclo continúa."
+          ],
+          "exemplo": {
+            "rot": "La inversión",
+            "texto": "De 88% a 95% con reglas y correcciones. Nadie cambió el modelo: miraron los datos y ajustaron el entorno."
+          }
+        },
+        {
+          "titulo": "Lo que se puede decidir",
+          "texto": [
+            "Comparar versiones en los mismos escenarios. Encontrar patrones (\"70% de los errores son procedimientos largos\"). Medir el costo del error (\"cada reprogramación cuesta R$ 150\"). Decidir dónde invertir primero."
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Registro de ejecuciones",
+      "sub": "Empieza con los tres campos. La versión completa llega cuando el volumen lo pida.",
+      "blocos": [
+        {
+          "rot": "EXECUCOES.md · mínimo viable",
+          "icone": "lista",
+          "conteudo": "| fecha | lo que se pidió | lo que se entregó | ¿salió bien? (sí / no / parcial) |\n|---|---|---|---|\n|  |  |  |  |"
+        },
+        {
+          "rot": "EXECUCOES.md · completo",
+          "icone": "grafico",
+          "conteudo": "| fecha | versión del agente | objetivo | decisión tomada | herramienta usada | tiempo | costo | resultado | error | intervención humana | evaluación (correcta / parcial / errónea) | corrección aplicada |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n|  |  |  |  |  |  |  |  |  |  |  |  |"
+        },
+        {
+          "rot": "De la falla a la regla (modelo de registro)",
+          "icone": "caneta",
+          "conteudo": "## Falla <fecha>\nLo que pasó: \nDecisión que tomó el agente: \nCausa raíz (¿faltó contexto, regla, ejemplo o herramienta?): \nCorrección mínima posible: \nRegla nueva (texto exacto que entró en el archivo): \nVersión del agente: v1.0 → v1.1\nCómo sabré si se resolvió: próximas 20 ejecuciones, contar aciertos"
+        }
+      ]
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Práctica",
+      "sub": "Una semana de observación.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "1 · Una semana de registro",
+          "min": "5 min por día",
+          "dias": 7,
+          "texto": "Para la función que elegiste, registra cada ejecución en EXECUCOES.md con los tres campos mínimos.",
+          "pronto": "el archivo tiene al menos 10 líneas y puedes decir la tasa de acierto de la semana (ej.: 8 de 10)."
+        },
+        {
+          "id": "e2",
+          "titulo": "2 · Una regla nacida de un error",
+          "min": "20 min",
+          "texto": "Toma la falla que más se repitió en la semana y completa el modelo \"de la falla a la regla\". Pon la regla en el archivo y sube la versión.",
+          "pronto": "la regla está escrita en el archivo del agente, la versión subió (v1.0 → v1.1) y las próximas ejecuciones se están contando para comparar."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Prueba rápida",
+      "sub": "4 preguntas.",
+      "perguntas": [
+        {
+          "p": "La agenda mostraba el horario como libre y el agente agendó fuera del horario de atención del médico. ¿Cuál fue la causa raíz?",
+          "opcoes": [
+            "El modelo es débil",
+            "Faltaba cruzar la agenda con el horario de atención: regla ausente",
+            "El paciente pidió mal"
+          ],
+          "certa": 1,
+          "ref": "diagrama",
+          "explica": "Agenda libre no es médico disponible. La corrección fue una regla permanente en el entorno, no un modelo nuevo."
+        },
+        {
+          "p": "¿Cuál es la observabilidad mínima viable?",
+          "opcoes": [
+            "Los 12 campos desde el primer día",
+            "Lo que se pidió, lo que se entregó y si salió bien",
+            "Solo el costo en tokens"
+          ],
+          "certa": 1,
+          "ref": "codigo",
+          "explica": "Tres campos ya permiten calcular el acierto y cerrar el primer ciclo. Más campos entran cuando el volumen lo pida."
+        },
+        {
+          "p": "En la v1.1 apareció un patrón de error nuevo (conflicto de consultorio). Eso significa que...",
+          "opcoes": [
+            "la v1.1 empeoró y hay que deshacerla",
+            "el ciclo está funcionando: nuevo patrón, nueva regla",
+            "el agente alcanzó el límite"
+          ],
+          "certa": 1,
+          "ref": "passos",
+          "explica": "Los patrones antiguos desaparecieron y la tasa subió de 88% a 95%. Aparecen patrones nuevos cuando los antiguos dejan de estorbar."
+        },
+        {
+          "p": "Después de 2 meses, ¿qué tiene la clínica que un competidor no puede copiar contratando el mismo modelo?",
+          "opcoes": [
+            "El modelo",
+            "Las 14 reglas nacidas de fallos, el historial y los registros",
+            "La API"
+          ],
+          "certa": 1,
+          "ref": "diagrama",
+          "explica": "El jardín es de la clínica. Si cambia de modelo, el jardín sigue; quien copia el modelo empieza de cero.",
+          "cert": true
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Resumen",
+      "itens": [
+        {
+          "t": "El error se vuelve regla",
+          "texto": "Registro con causa raíz, la corrección más pequeña, regla en el archivo, versión nueva."
+        },
+        {
+          "t": "Compara versiones",
+          "texto": "Mismos escenarios, antes y después: 88% → 95% sin cambiar el modelo."
+        },
+        {
+          "t": "Empieza con tres campos",
+          "texto": "Pedido, entrega, salió bien. Con eso ya cierras el primer ciclo."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para ir más allá",
+      "links": [
+        {
+          "t": "Caso completo: agente de atención de una clínica",
+          "href": "https://github.com/inematds/iacultivada/blob/main/conteudo/09-caso-clinica.md",
+          "icone": "arquivo"
+        },
+        {
+          "t": "Observabilidad del cultivo",
+          "href": "https://github.com/inematds/iacultivada/blob/main/conteudo/10-observabilidade.md",
+          "icone": "grafico"
+        },
+        {
+          "t": "Paquete: triaje de atención",
+          "href": "https://github.com/inematds/iacultivada/tree/main/pacotes/triagem-de-atendimento",
+          "icone": "pasta"
+        }
+      ]
+    }
+  ]
+}

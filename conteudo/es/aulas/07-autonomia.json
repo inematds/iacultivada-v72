@@ -1,0 +1,319 @@
+{
+  "slug": "autonomia",
+  "num": 7,
+  "menu": "Autonomía",
+  "titulo": "Autonomía por evidencia, no por confianza",
+  "titulo_curto": "Autonomía por evidencia",
+  "minutos": 16,
+  "lead": "La tentación es dar autonomía pronto: las respuestas parecen buenas y alguien dice \"déjalo correr solo\". Es como ascender al practicante el segundo día porque hizo una buena pregunta. Esta clase te da los cuatro niveles, los números para subir y el camino de vuelta.",
+  "objetivo": "decidir cuándo subir o bajar el nivel de autonomía de un agente usando acierto, volumen de ejecuciones y gravedad de los errores.",
+  "competencias": [
+    "aplicar-niveis-de-autonomia",
+    "definir-criterio-de-promocao",
+    "rebaixar-agente-com-criterio"
+  ],
+  "aprende": [
+    {
+      "icone": "camadas",
+      "t": "Los cuatro niveles: recomienda, ejecuta con aprobación, ejecuta con excepciones, opera dentro de límites"
+    },
+    {
+      "icone": "grafico",
+      "t": "Los números para subir de nivel"
+    },
+    {
+      "icone": "voltar",
+      "t": "Cuándo bajar, y por qué eso no es un castigo"
+    },
+    {
+      "icone": "chat",
+      "t": "Practicar la conversación con quien quiere saltarse pasos"
+    }
+  ],
+  "hero_alt": "Pista de práctica de una autoescuela vista desde arriba, con un auto y conos naranjas.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "Los cuatro niveles de autonomía",
+      "sub": "Una tarea a la vez. Haz clic en cada nivel para ver el criterio de ascenso.",
+      "estilo": "escada",
+      "nos": [
+        {
+          "icone": "chat",
+          "titulo": "1 · Recomienda",
+          "sub": "El humano decide y ejecuta",
+          "detalhe": "El agente analiza y sugiere; tú evalúas, decides y lo haces. Inicio de la operación, escenario de alto riesgo o sin historial. Todo agente nace aquí."
+        },
+        {
+          "icone": "portao",
+          "titulo": "2 · Ejecuta con aprobación",
+          "sub": "Nada sale sin visto bueno",
+          "detalhe": "El agente hace el trabajo y lo deja pendiente; el humano aprueba cada acción. Para subir a este nivel: acierto superior a 90% en el nivel 1, al menos 50 ejecuciones evaluadas y cero errores graves en las últimas 2 semanas."
+        },
+        {
+          "icone": "lupa",
+          "titulo": "3 · Ejecuta; el humano ve las excepciones",
+          "sub": "Supervisa, no aprueba",
+          "detalhe": "Los casos comunes salen solos; los escenarios nuevos, los montos altos y los conflictos de reglas van a revisión. Para subir: más de 95% en el nivel 2, 200 ejecuciones evaluadas, cero errores graves en el último mes e intervenciones por debajo de 5%."
+        },
+        {
+          "icone": "check",
+          "titulo": "4 · Opera dentro de límites",
+          "sub": "Informe periódico",
+          "forte": true,
+          "detalhe": "Autónomo dentro de límites claros: monto máximo, tipos de decisión, horarios, alcance. Para subir: más de 98% en el nivel 3, 500 ejecuciones evaluadas, cero errores graves en 2 meses y límites probados."
+        }
+      ],
+      "legenda": "El criterio para subir no es una sugerencia: es una exigencia. Sin los números, el ascenso no ocurre.",
+      "dica": "En los textos de vida personal y Jarvis del proyecto, la escalera aparece con tres pasos (propone, ejecuta y tú revisas, ejecuta y reporta). Es la misma escalera: aquí está completa, con el nivel de aprobación separado."
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Qué medir antes de ascender",
+      "sub": "Ocho métricas. Las tres primeras son el mínimo.",
+      "passos": [
+        {
+          "titulo": "Volumen y acierto",
+          "texto": [
+            "Historial de ejecuciones en ese escenario y tasa de acierto según la evaluación (humana o automatizada)."
+          ]
+        },
+        {
+          "titulo": "Gravedad y costo",
+          "texto": [
+            "No todos los errores son iguales: equivocarte en el tono de un mensaje no es lo mismo que equivocarte en el valor de una factura. ¿Cuánto cuesta cada fallo en dinero, tiempo, reputación o retrabajo?"
+          ]
+        },
+        {
+          "titulo": "Estabilidad",
+          "texto": [
+            "¿La tasa se mantiene en el tiempo o fluctúa? ¿Mantiene la calidad en escenarios variados, no solo en los simples? ¿Con qué frecuencia alguien tiene que corregir?"
+          ]
+        },
+        {
+          "titulo": "El camino inverso",
+          "texto": [
+            "Si un agente en el nivel 3 empieza a fallar de una forma nueva (el escenario cambió, una regla quedó desactualizada, una integración se rompió), baja al nivel 2 hasta que se estabilice.",
+            "Bajar no es un castigo. Es el ciclo funcionando."
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "simconversa",
+      "titulo": "Conversación simulada: el director con prisa",
+      "sub": "Conversación simulada para practicar. Elige la respuesta que darías; el comentario aparece enseguida.",
+      "personagem": {
+        "nome": "Director comercial",
+        "papel": "quiere que el agente de leads envíe correos solo"
+      },
+      "inicio": "abre",
+      "falas": {
+        "abre": {
+          "cliente": "El agente de calificación de leads lleva una semana funcionando muy bien. Quiero que envíe los correos de seguimiento solo a partir del lunes. ¿Lo puedes liberar?",
+          "opcoes": [
+            {
+              "t": "Sí. Si las respuestas están buenas, ganamos tiempo.",
+              "vai": "fim-pressa",
+              "nota": 0,
+              "comenta": "Autonomía por confianza. \"Se ve bien\" no es un número, y el envío externo es justo el tipo de acción que pide historial antes."
+            },
+            {
+              "t": "Antes de liberarlo: ¿cuántas ejecuciones se evaluaron y cuál es la tasa de acierto?",
+              "vai": "numeros",
+              "nota": 2,
+              "comenta": "Buena pregunta. La decisión sale de los números, y no dijiste ni sí ni no antes de verlos."
+            },
+            {
+              "t": "Creo que es pronto, pero tú decides.",
+              "vai": "numeros",
+              "nota": 1,
+              "comenta": "El instinto es correcto, pero es opinión contra opinión. Sin pedir los números, la conversación se vuelve una disputa de confianza."
+            }
+          ]
+        },
+        "numeros": {
+          "cliente": "Unas 40, creo. El equipo las revisó por encima y le gustaron. Hubo un correo que salió con el precio anterior, pero fue solo uno.",
+          "opcoes": [
+            {
+              "t": "Entonces ya pasa al nivel 3: envía y el equipo revisa solo las excepciones.",
+              "vai": "fim-pressa",
+              "nota": 0,
+              "comenta": "Saltaste dos niveles. Con 40 ejecuciones y un error de precio, ni siquiera el nivel 2 está liberado."
+            },
+            {
+              "t": "Vamos al nivel 2: prepara el correo y nada sale sin aprobación.",
+              "vai": "criterio",
+              "nota": 1,
+              "comenta": "Más seguro, pero todavía es pronto: el nivel 2 pide al menos 50 ejecuciones evaluadas y cero errores graves en las últimas dos semanas. El precio anterior es un error grave."
+            },
+            {
+              "t": "Un precio equivocado para un cliente es un error grave. Se queda en el nivel 1, el equipo envía, y nosotros corregimos el contexto: tabla de precios con fecha de vigencia.",
+              "vai": "criterio",
+              "nota": 2,
+              "comenta": "Eso. Clasificaste la gravedad, mantuviste el nivel y convertiste el fallo en la corrección más pequeña posible, en el entorno."
+            }
+          ]
+        },
+        "criterio": {
+          "cliente": "Está bien. Pero ¿cuándo sube? No quiero quedarme así para siempre.",
+          "opcoes": [
+            {
+              "t": "Cuando el equipo sienta confianza.",
+              "vai": "fim-vago",
+              "nota": 0,
+              "comenta": "Un criterio que nadie puede verificar. Dentro de un mes la misma conversación vuelve, y gana quien tenga más prisa."
+            },
+            {
+              "t": "Dentro de un mes, si nadie se queja.",
+              "vai": "fim-vago",
+              "nota": 1,
+              "comenta": "Tiene plazo, pero \"nadie se queja\" no es una evaluación. Sin una muestra revisada, un error que nadie vio cuenta como acierto."
+            },
+            {
+              "t": "Cuando tenga 50 ejecuciones evaluadas, acierto superior al 90 % y cero errores graves en las últimas dos semanas. Yo lo pongo en el scorecard y lo revisamos juntos.",
+              "vai": "fim-bom",
+              "nota": 2,
+              "comenta": "Criterio escrito, verificable y con fecha para revisarlo. Su prisa se convierte en una meta que él mismo puede seguir."
+            }
+          ]
+        },
+        "fim-pressa": {
+          "fim": true,
+          "titulo": "Autonomía por confianza",
+          "texto": "El próximo correo equivocado (precio anterior, destinatario cambiado, plazo prometido) saldrá al cliente sin que nadie lo vea. Ascender sin números es una apuesta. Empieza de nuevo e intenta decidir con los datos."
+        },
+        "fim-vago": {
+          "fim": true,
+          "titulo": "Nivel correcto, criterio vago",
+          "texto": "Mantuviste el nivel, pero sin un número escrito el ascenso se vuelve cuestión de quién insiste más. Empieza de nuevo y da un criterio que se pueda verificar."
+        },
+        "fim-bom": {
+          "fim": true,
+          "titulo": "Autonomía por evidencia",
+          "texto": "El agente se queda en el nivel 1, el fallo se convirtió en una corrección de contexto y el ascenso tiene un criterio escrito en el scorecard. Cuando lleguen los números, la decisión es fácil, para los dos."
+        }
+      },
+      "licao": "Pregunta los números, clasifica la gravedad del error, mantén el nivel y escribe el criterio de ascenso. La prisa se vuelve meta."
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Criterio de ascenso",
+      "sub": "Copia en la ficha del agente, una tabla por tarea.",
+      "blocos": [
+        {
+          "rot": "En la FICHA-DO-AGENTE.md",
+          "icone": "escudo",
+          "conteudo": "## Autonomía — tarea: <ej.: enviar follow-up>\nNivel actual: 1 (recomienda; el humano decide y ejecuta)   desde: <fecha>\n\nPara subir al nivel 2 (ejecuta con aprobación):\n- [ ] 50+ ejecuciones evaluadas        hoy: \n- [ ] acierto superior al 90%          hoy: \n- [ ] cero errores graves en 2 semanas   último error grave: \n\nUn error grave en esta tarea es: <ej.: precio, plazo o destinatario equivocado>\nBaja un nivel si: aparece un error grave nuevo o el acierto cae por debajo de <x>%\nPróxima revisión: <fecha>"
+        }
+      ]
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Práctica",
+      "sub": "Una tarea, un criterio.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "1 · El criterio de tu tarea",
+          "min": "15 min",
+          "texto": "Elige una tarea de tu agente (personal, Jarvis o empresa) y completa el criterio de promoción. Define qué es un error grave en ella.",
+          "pronto": "la ficha tiene el nivel actual, los tres números para subir, qué es un error grave y la regla de descenso."
+        },
+        {
+          "id": "e2",
+          "titulo": "2 · Conversación simulada con puntaje máximo",
+          "min": "10 min",
+          "texto": "Haz la conversación simulada de esta lección. Si no llegas al puntaje máximo, lee los comentarios y empieza de nuevo.",
+          "pronto": "terminaste con el puntaje máximo y puedes decir por qué \"precio equivocado\" mantuvo al agente en el nivel 1."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Prueba rápida",
+      "sub": "4 preguntas.",
+      "perguntas": [
+        {
+          "p": "Un agente tiene 120 ejecuciones evaluadas en el nivel 1, 93% de acierto y ningún error grave desde hace tres semanas. ¿Puede subir?",
+          "opcoes": [
+            "Sí, al nivel 2",
+            "Sí, directo al nivel 3",
+            "No, necesita 500 ejecuciones"
+          ],
+          "certa": 0,
+          "ref": "diagrama",
+          "explica": "Cumple los tres criterios del nivel 2 (90%+, 50+ evaluadas, cero errores graves en 2 semanas). El nivel 3 pide 95%+ en el nivel 2 y 200 evaluadas."
+        },
+        {
+          "p": "Un agente en el nivel 3 empieza a fallar porque cambió la integración con el CRM. ¿Qué hacer?",
+          "opcoes": [
+            "Mantenerlo en el nivel 3 y esperar lo mejor",
+            "Bajarlo al nivel 2 hasta que se estabilice",
+            "Apagar el agente para siempre"
+          ],
+          "certa": 1,
+          "ref": "passos",
+          "explica": "El camino inverso forma parte del ciclo. Baja, corrige el entorno, mide y vuelve a subir cuando los números regresen."
+        },
+        {
+          "p": "¿Por qué separar la gravedad del error y no solo contar la tasa de acierto?",
+          "opcoes": [
+            "Porque equivocarse en el tono de un mensaje no es equivocarse en el valor de una factura",
+            "Porque la tasa de acierto no importa",
+            "Porque el modelo lo clasifica solo"
+          ],
+          "certa": 0,
+          "ref": "passos",
+          "explica": "97% de acierto con un error de factura puede ser peor que 90% con errores de tono. Por eso cada nivel pide cero errores graves."
+        },
+        {
+          "p": "¿Cuál es la diferencia entre el nivel 2 y el nivel 3?",
+          "opcoes": [
+            "En el 2 el humano aprueba cada acción; en el 3 solo revisa las excepciones",
+            "En el 2 el agente no hace nada",
+            "En el 3 no existe el humano"
+          ],
+          "certa": 0,
+          "ref": "diagrama",
+          "explica": "En el 2 nada sale sin visto bueno. En el 3 los casos comunes salen solos y el humano supervisa las excepciones. Incluso en el 4 hay informe y límites.",
+          "cert": true
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Resumen",
+      "itens": [
+        {
+          "t": "Cuatro niveles",
+          "texto": "Recomienda, ejecuta con aprobación, ejecuta con excepciones, opera dentro de límites."
+        },
+        {
+          "t": "Números para subir",
+          "texto": "90%/50, 95%/200, 98%/500, siempre con cero errores graves en el período."
+        },
+        {
+          "t": "Bajar forma parte",
+          "texto": "Error nuevo, un nivel abajo, hasta que se estabilice."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para ir más allá",
+      "links": [
+        {
+          "t": "Criterios para aumentar la autonomía (texto completo)",
+          "href": "https://github.com/inematds/iacultivada/blob/main/conteudo/12-autonomia-progressiva.md",
+          "icone": "arquivo"
+        },
+        {
+          "t": "Paquete: calificador de leads (ficha, scorecard, n8n)",
+          "href": "https://github.com/inematds/iacultivada/tree/main/pacotes/qualificador-de-leads",
+          "icone": "pasta"
+        }
+      ]
+    }
+  ]
+}

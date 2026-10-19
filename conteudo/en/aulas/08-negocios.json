@@ -1,0 +1,370 @@
+{
+  "slug": "negocios",
+  "num": 8,
+  "menu": "Company",
+  "titulo": "The third garden: the company, and your plan",
+  "titulo_curto": "Company and plan",
+  "minutos": 18,
+  "lead": "In a company, to cultivate is to stop treating AI as software you program and start treating it as a capability the organization develops. When projects fail, the reason is rarely the model: it's a lack of context, process, and feedback. This lesson closes the course with a dated plan.",
+  "objetivo": "choose the company's first process for an agent and leave with a dated 30- or 90-day plan.",
+  "competencias": [
+    "escolher-primeiro-processo",
+    "diagnosticar-falha-de-projeto-de-ia",
+    "planejar-cultivo-com-datas"
+  ],
+  "aprende": [
+    {
+      "icone": "alvo",
+      "t": "Choose your first process: high volume, clear rules, low cost of errors"
+    },
+    {
+      "icone": "lupa",
+      "t": "Read the symptom of a failing project and find the minimal fix"
+    },
+    {
+      "icone": "cerebro",
+      "t": "Why the garden is the asset, not the model"
+    },
+    {
+      "icone": "calendario",
+      "t": "Generate your plan with dates"
+    }
+  ],
+  "hero_alt": "Three people in a meeting room in front of a board with sticky notes and a rising bar chart.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "Same model, two gardens",
+      "sub": "The model is rented, shared, replaceable. Click to compare.",
+      "nos": [
+        {
+          "icone": "chip",
+          "titulo": "Model X",
+          "sub": "The same in both",
+          "detalhe": "Latest release, state of the art, available to any company. This is not where the difference lies."
+        },
+        {
+          "icone": "x",
+          "titulo": "Company A",
+          "sub": "Gets it wrong 30% of the time",
+          "detalhe": "No run history, few examples, no structured evaluation, template rules, no failure log and no versions. When it gets something wrong, you tweak the prompt and hope. If you switch models, you start from zero.",
+          "itens": [
+            {
+              "icone": "x",
+              "t": "no evaluation"
+            },
+            {
+              "icone": "x",
+              "t": "no versions"
+            }
+          ]
+        },
+        {
+          "icone": "check",
+          "titulo": "Company B",
+          "sub": "Gets it wrong 2% of the time",
+          "forte": true,
+          "detalhe": "10,000 logged runs, 1,200 structured evaluations, 300 rules born from real errors, 500 curated examples, tested skills and organizational memory. If you switch models, the whole garden carries over.",
+          "itens": [
+            {
+              "icone": "grafico",
+              "t": "10,000 runs"
+            },
+            {
+              "icone": "caneta",
+              "t": "300 rules from real errors"
+            },
+            {
+              "icone": "lista",
+              "t": "500 curated examples"
+            }
+          ]
+        }
+      ],
+      "legenda": "A competitor can hire the same model and even the same team. They can't copy 10,000 evaluated runs. The garden is the moat; the model is not.",
+      "dica": "Numbers from the project's illustrative example (ch. 11): they show the scale, not a target."
+    },
+    {
+      "tipo": "passos",
+      "titulo": "From symptom to minimal fix",
+      "sub": "Why projects fail, and the smallest repair.",
+      "passos": [
+        {
+          "titulo": "\"It hallucinates\"",
+          "sub": "Missing or cluttered context",
+          "texto": [
+            "Curate the base: less, better, with an owner. Not the whole Drive."
+          ]
+        },
+        {
+          "titulo": "\"Nobody trusts it\"",
+          "sub": "No sample-based evaluation",
+          "texto": [
+            "Biweekly scorecard with a human reviewing 20 cases."
+          ]
+        },
+        {
+          "titulo": "\"It broke in production\"",
+          "sub": "Examples only from easy cases",
+          "texto": [
+            "Include the ugly cases and the exceptions in the examples. And if it \"did something it shouldn't have\": write the list of what's forbidden and require confirmation."
+          ]
+        },
+        {
+          "titulo": "\"It stopped improving\"",
+          "sub": "Feedback doesn't return to the environment",
+          "texto": [
+            "Ritual: every failure becomes one line of rule or example. And if it \"costs more than it saves\": one process, one agent, one indicator."
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Where to start, and what real cases teach",
+      "sub": "Every agent is born at level 1.",
+      "passos": [
+        {
+          "titulo": "By area",
+          "texto": [
+            "Sales: lead qualification and research. Customer service: triage and suggested replies. Finance: reconciliation and classification of entries.",
+            "Marketing: first draft within the voice guide. Operations: data extraction and checking against a checklist. HR: résumé screening against explicit criteria."
+          ]
+        },
+        {
+          "titulo": "Evaluation",
+          "texto": [
+            "Klarna replaced hundreds of customer service agents with AI in 2024, admitted a drop in quality in 2025, and went back to hiring humans for the complex cases: cost-cutting without evaluation is cultivation without a harvest.",
+            "\"Workslop\" (HBR research): almost half of workers receive AI content that looks good and is useless."
+          ]
+        },
+        {
+          "titulo": "Culture",
+          "texto": [
+            "At Shopify, before asking to hire anyone, the team shows why AI can't do the job: the culture changes before the tool does.",
+            "Duolingo announced \"AI first,\" got public backlash, and backed off: how you communicate cultivation matters."
+          ]
+        },
+        {
+          "titulo": "The agent manager",
+          "texto": [
+            "The role that emerges is not a prompt engineer: it's the person who writes agent profiles, curates context, maintains examples, reads scorecards, and runs the feedback ritual.",
+            "The company that already knows how to onboard, give feedback, and measure results gets ahead."
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "The company's 90-day plan",
+      "sub": "Copy it into the project document and add dates.",
+      "blocos": [
+        {
+          "rot": "PLANO-90-DIAS.md",
+          "icone": "calendario",
+          "conteudo": "# First agent — <process>          owner: <name>\n\n## Days 1–30\n- [ ] Process with volume, a clear rule, and low cost of error: \n- [ ] Agent profile written (role, result, owner, three limit lists)\n- [ ] Curated context (product, ideal customer, policy, glossary)\n- [ ] 20 annotated examples, including the ugly ones\n- [ ] Agent at level 1 (recommends)\n\n## Days 31–60\n- [ ] Scorecard running (sample of 20 cases reviewed by a human)\n- [ ] Two feedback rituals: failures become rules and examples\n- [ ] Cost per task and error rate measured\n\n## Days 61–90\n- [ ] Move up to level 2 if the scorecard allows it (90%+, 50+ evaluated, zero serious errors in 2 weeks)\n- [ ] Method documented\n- [ ] Second process chosen\n- [ ] Agent manager appointed"
+        }
+      ]
+    },
+    {
+      "tipo": "mapa",
+      "titulo": "The cultivation map",
+      "sub": "The course's four main deliverables and what each one leaves ready. Click an exercise to see its \"done when.\"",
+      "resultado": {
+        "titulo": "By the end of the course",
+        "texto": "An agent of your own with a profile, a failure log, a measured success rate, a rule born from an error, and a written criterion for moving up a level.",
+        "total": "8 exercises"
+      },
+      "legenda": "Recommended order: each deliverable uses what the previous one left ready.",
+      "degraus": [
+        {
+          "aula": "oito-elementos",
+          "icone": "arquivo",
+          "quando": "Week 1",
+          "titulo": "The files",
+          "sub": "Profile and the five files",
+          "saida": "An agent described by its eight elements, in one folder.",
+          "passo": "Start with the profile: role in one sentence, a human owner, and the three limit lists. The other four files can start out empty."
+        },
+        {
+          "aula": "jarvis",
+          "icone": "robo",
+          "quando": "Week 1 and 2",
+          "titulo": "Daily use",
+          "sub": "Master file and failure log",
+          "saida": "An agent in use every day, with FALHAS.md and a runbook.",
+          "passo": "Works for Jarvis or for personal cultivation (lesson 4): one role, daily use, one line per error."
+        },
+        {
+          "aula": "ciclo",
+          "icone": "grafico",
+          "quando": "Week 3",
+          "titulo": "The cycle",
+          "sub": "Log and first rule",
+          "saida": "The week's success rate and version v1.1.",
+          "passo": "Requires one week of use. Three fields per run; the failure that repeated most becomes the first rule."
+        },
+        {
+          "aula": "autonomia",
+          "icone": "portao",
+          "quando": "Week 4",
+          "titulo": "Autonomy",
+          "sub": "Written criterion",
+          "saida": "Current level and the numbers to move up, in the profile.",
+          "passo": "Only after you have numbers. The agent stays at level 1 until the criterion is true."
+        }
+      ]
+    },
+    {
+      "tipo": "gerador",
+      "titulo": "Generate your plan with dates",
+      "sub": "Pick a start date and how much time you have per week. The plan respects the exercises that need days of real use.",
+      "curso": "Cultivated AI",
+      "horas_padrao": 3,
+      "degraus": [
+        {
+          "titulo": "Lesson 1 · Concept and diagnosis",
+          "aula": "semente"
+        },
+        {
+          "titulo": "Lesson 2 · Profile and five files",
+          "aula": "oito-elementos"
+        },
+        {
+          "titulo": "Lesson 3 · Maturity ladder",
+          "aula": "escada"
+        },
+        {
+          "titulo": "Lesson 4 · Personal life",
+          "aula": "vida-pessoal"
+        },
+        {
+          "titulo": "Lesson 5 · Your Jarvis",
+          "aula": "jarvis"
+        },
+        {
+          "titulo": "Lesson 6 · Closing the cycle",
+          "aula": "ciclo"
+        },
+        {
+          "titulo": "Lesson 7 · Autonomy through evidence",
+          "aula": "autonomia"
+        }
+      ],
+      "txt": {
+        "titulo": "Plan — Cultivated AI",
+        "inicio": "Start",
+        "ritmo": "Pace",
+        "termino": "Expected finish",
+        "ate": "by",
+        "pronto": "done when",
+        "semanas": "weeks",
+        "travou": "## What went wrong and the rule I created",
+        "h": "h per week",
+        "exs": "exercises"
+      }
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Final test",
+      "sub": "4 questions about the whole course.",
+      "perguntas": [
+        {
+          "p": "Which process is the best first candidate for an agent in the company?",
+          "opcoes": [
+            "The most strategic one, even with vague rules",
+            "One with volume, a clear rule, and a low cost of errors",
+            "All of them at once, to gain scale"
+          ],
+          "certa": 1,
+          "ref": "codigo",
+          "explica": "Volume gives you data to evaluate, a clear rule gives you something to measure, and a low cost of errors lets you learn. A wide scope is the \"costs more than it saves\" trap."
+        },
+        {
+          "p": "\"It worked in the pilot, it broke in production.\" What is the minimum fix?",
+          "opcoes": [
+            "Switch to a bigger model",
+            "Include the ugly cases and the exceptions in the examples",
+            "Turn the agent off"
+          ],
+          "certa": 1,
+          "ref": "passos",
+          "explica": "Examples with only easy cases produce an agent that only solves easy cases. The minimum fix is in the environment."
+        },
+        {
+          "p": "The company swaps model X for model Y. What happens to the person who cultivated?",
+          "opcoes": [
+            "They lose everything and start over",
+            "The garden carries on: context, rules, examples, and evaluations move to the new model",
+            "They have to train the new model from scratch"
+          ],
+          "certa": 1,
+          "ref": "diagrama",
+          "explica": "The asset is the garden, not the seed. Anyone who only had the model goes back to zero.",
+          "cert": true
+        },
+        {
+          "p": "Which sentence sums up the course?",
+          "opcoes": [
+            "The best model wins",
+            "What improves is not the seed, it's the garden",
+            "Full autonomy from day one"
+          ],
+          "certa": 1,
+          "ref": "mapa",
+          "explica": "The model is the same for everyone. What you write, measure, and correct around it is what improves, and it's yours.",
+          "cert": true
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "The course in three sentences",
+      "itens": [
+        {
+          "t": "The model is the seed",
+          "texto": "It arrives ready-made and is the same as your competitor's. The garden around it is yours."
+        },
+        {
+          "t": "Execution without evaluation breeds repetition",
+          "texto": "The failure log, the scorecard, and the rule in the file close the loop."
+        },
+        {
+          "t": "Autonomy by evidence",
+          "texto": "Every agent starts at level 1 and moves up with numbers, not with confidence."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Keep going here",
+      "links": [
+        {
+          "t": "Cultivated AI in business (full text)",
+          "href": "https://github.com/inematds/iacultivada/blob/main/conteudo/03-negocios.md",
+          "icone": "arquivo"
+        },
+        {
+          "t": "The accumulated garden as intellectual property",
+          "href": "https://github.com/inematds/iacultivada/blob/main/conteudo/11-jardim-ativo.md",
+          "icone": "cerebro"
+        },
+        {
+          "t": "Agent packs by area (leads, support, finance, marketing)",
+          "href": "https://github.com/inematds/iacultivada/tree/main/pacotes",
+          "icone": "pasta"
+        },
+        {
+          "t": "Company kit to download",
+          "href": "https://inematds.github.io/iacultivada/kits/",
+          "icone": "baixar"
+        },
+        {
+          "t": "Open courses at INEMA.CLUB",
+          "href": "https://inema.club/",
+          "icone": "seta"
+        }
+      ]
+    }
+  ]
+}

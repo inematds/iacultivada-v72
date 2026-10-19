@@ -1,0 +1,319 @@
+{
+  "slug": "autonomia",
+  "num": 7,
+  "menu": "Autonomy",
+  "titulo": "Autonomy by evidence, not by trust",
+  "titulo_curto": "Autonomy by evidence",
+  "minutos": 16,
+  "lead": "The temptation is to grant autonomy early: the answers look good and someone says \"just let it run on its own.\" It's like promoting the intern on day two because they asked a good question. This lesson gives you the four levels, the numbers to move up, and the way back.",
+  "objetivo": "decide when to raise or lower an agent's autonomy level using accuracy, run volume, and the severity of errors.",
+  "competencias": [
+    "aplicar-niveis-de-autonomia",
+    "definir-criterio-de-promocao",
+    "rebaixar-agente-com-criterio"
+  ],
+  "aprende": [
+    {
+      "icone": "camadas",
+      "t": "The four levels: recommends, executes with approval, executes with exceptions, operates within limits"
+    },
+    {
+      "icone": "grafico",
+      "t": "The numbers to move up a level"
+    },
+    {
+      "icone": "voltar",
+      "t": "When to step down, and why it isn't punishment"
+    },
+    {
+      "icone": "chat",
+      "t": "Practice the conversation with someone who wants to skip steps"
+    }
+  ],
+  "hero_alt": "Driving school practice track seen from above, with a car and orange cones.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "The four levels of autonomy",
+      "sub": "One task at a time. Click each level to see the criteria for moving up.",
+      "estilo": "escada",
+      "nos": [
+        {
+          "icone": "chat",
+          "titulo": "1 · Recommends",
+          "sub": "Human decides and executes",
+          "detalhe": "The agent analyzes and suggests; you evaluate, decide, and do it. Start of operation, high-risk scenario, or no history. Every agent starts here."
+        },
+        {
+          "icone": "portao",
+          "titulo": "2 · Executes with approval",
+          "sub": "Nothing goes out without an OK",
+          "detalhe": "The agent does the work and leaves it pending; the human approves each action. To move up to here: accuracy above 90% at level 1, at least 50 evaluated runs, and zero serious errors in the last 2 weeks."
+        },
+        {
+          "icone": "lupa",
+          "titulo": "3 · Executes; human sees exceptions",
+          "sub": "Supervises, doesn't approve",
+          "detalhe": "Common cases go out on their own; new scenarios, high amounts, and rule conflicts go to review. To move up: above 95% at level 2, 200 evaluated runs, zero serious errors in the last month, and interventions below 5%."
+        },
+        {
+          "icone": "check",
+          "titulo": "4 · Operates within limits",
+          "sub": "Periodic report",
+          "forte": true,
+          "detalhe": "Autonomous within clear limits: maximum amount, types of decision, hours, scope. To move up: above 98% at level 3, 500 evaluated runs, zero serious errors in 2 months, and tested limits."
+        }
+      ],
+      "legenda": "The criterion for moving up isn't a suggestion: it's a requirement. Without the numbers, the promotion doesn't happen.",
+      "dica": "In the project's personal life and Jarvis texts, the ladder appears with three steps (proposes, executes and you review, executes and reports). It's the same ladder: here it's complete, with the approval level shown separately."
+    },
+    {
+      "tipo": "passos",
+      "titulo": "What to measure before promoting",
+      "sub": "Eight metrics. The first three are the minimum.",
+      "passos": [
+        {
+          "titulo": "Volume and accuracy",
+          "texto": [
+            "History of runs in that scenario and accuracy rate by evaluation (human or automated)."
+          ]
+        },
+        {
+          "titulo": "Severity and cost",
+          "texto": [
+            "Not every error is equal: getting the tone of a message wrong is not the same as getting the amount on an invoice wrong. How much does each failure cost in money, time, reputation, or rework?"
+          ]
+        },
+        {
+          "titulo": "Stability",
+          "texto": [
+            "Does the rate hold over time or swing? Does it keep quality across varied scenarios, not just simple ones? How often does someone need to correct it?"
+          ]
+        },
+        {
+          "titulo": "The reverse path",
+          "texto": [
+            "If an agent at level 3 starts making mistakes in a new way (the scenario changed, a rule is outdated, an integration broke), it moves down to level 2 until it stabilizes.",
+            "Moving down isn't punishment. It's the cycle working."
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "simconversa",
+      "titulo": "Simulated conversation: the director in a hurry",
+      "sub": "A simulated conversation for practice. Pick the answer you would give; the comment appears right after.",
+      "personagem": {
+        "nome": "Sales director",
+        "papel": "wants the leads agent sending emails on its own"
+      },
+      "inicio": "abre",
+      "falas": {
+        "abre": {
+          "cliente": "The lead qualification agent has been great for a week. I want it to send the follow-up emails on its own starting Monday. Can you release it?",
+          "opcoes": [
+            {
+              "t": "Sure. If the answers are good, we save time.",
+              "vai": "fim-pressa",
+              "nota": 0,
+              "comenta": "Autonomy based on trust. \"Looks good\" is not a number, and sending outside the company is exactly the kind of action that needs a track record first."
+            },
+            {
+              "t": "Before I release it: how many runs have been evaluated, and what's the accuracy rate?",
+              "vai": "numeros",
+              "nota": 2,
+              "comenta": "Right question. The decision comes from the numbers, and you didn't say yes or no before seeing them."
+            },
+            {
+              "t": "I think it's too early, but you're the one who decides.",
+              "vai": "numeros",
+              "nota": 1,
+              "comenta": "Your instinct is right, but it's opinion against opinion. Without asking for the numbers, the conversation becomes a contest of confidence."
+            }
+          ]
+        },
+        "numeros": {
+          "cliente": "About 40, I think. The team skimmed them and liked them. One email went out with an old price, but it was just one.",
+          "opcoes": [
+            {
+              "t": "Then it goes straight to level 3: it sends and the team reviews only the exceptions.",
+              "vai": "fim-pressa",
+              "nota": 0,
+              "comenta": "That skipped two steps. With 40 runs and a price error, not even level 2 is cleared."
+            },
+            {
+              "t": "Let's go to level 2: it prepares the email and nothing goes out without approval.",
+              "vai": "criterio",
+              "nota": 1,
+              "comenta": "Safer, but still too early: level 2 requires at least 50 evaluated runs and zero serious errors in the last two weeks. The old price is a serious error."
+            },
+            {
+              "t": "A wrong price for a customer is a serious error. It stays at level 1, the team sends, and we fix the context: a price table with an expiration date.",
+              "vai": "criterio",
+              "nota": 2,
+              "comenta": "Exactly. You rated the severity, kept the level, and turned the failure into the smallest possible fix, in the environment."
+            }
+          ]
+        },
+        "criterio": {
+          "cliente": "Okay. But when does it move up? I don't want to be stuck here forever.",
+          "opcoes": [
+            {
+              "t": "When the team feels confident.",
+              "vai": "fim-vago",
+              "nota": 0,
+              "comenta": "A criterion nobody can check. A month from now the same conversation comes back, and whoever is in more of a hurry wins."
+            },
+            {
+              "t": "A month from now, if nobody complains.",
+              "vai": "fim-vago",
+              "nota": 1,
+              "comenta": "There's a deadline, but \"nobody complains\" isn't an evaluation. Without a reviewed sample, an error nobody saw counts as a success."
+            },
+            {
+              "t": "When there are 50 evaluated runs, accuracy above 90%, and zero serious errors in the last two weeks. I'll put that in the scorecard and we'll look at it together.",
+              "vai": "fim-bom",
+              "nota": 2,
+              "comenta": "A written, verifiable criterion with a date to review it. His hurry becomes a goal he can track himself."
+            }
+          ]
+        },
+        "fim-pressa": {
+          "fim": true,
+          "titulo": "Autonomy based on trust",
+          "texto": "The next wrong email (old price, wrong recipient, a promised deadline) will go out to the customer without anyone seeing it. Promoting without numbers is a gamble. Start over and try to decide by the data."
+        },
+        "fim-vago": {
+          "fim": true,
+          "titulo": "Right level, vague criterion",
+          "texto": "You held the level, but without a written number the promotion comes down to who pushes hardest. Start over and give a criterion that can be checked."
+        },
+        "fim-bom": {
+          "fim": true,
+          "titulo": "Autonomy by evidence",
+          "texto": "The agent stays at level 1, the failure became a context fix, and the promotion has a written criterion in the scorecard. When the numbers arrive, the decision is easy, for both of you."
+        }
+      },
+      "licao": "Ask for the numbers, rate the severity of the error, hold the level, and write the criterion for moving up. The hurry becomes a goal."
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Promotion criteria",
+      "sub": "Copy this into the agent profile, one table per task.",
+      "blocos": [
+        {
+          "rot": "In FICHA-DO-AGENTE.md",
+          "icone": "escudo",
+          "conteudo": "## Autonomy — task: <e.g.: send follow-up>\nCurrent level: 1 (recommends; human decides and executes)   since: <date>\n\nTo move up to level 2 (executes with approval):\n- [ ] 50+ evaluated runs        today: \n- [ ] accuracy above 90%            today: \n- [ ] zero serious errors in 2 weeks   last serious error: \n\nA serious error on this task is: <e.g.: wrong price, deadline, or recipient>\nMoves down one level if: a new serious error appears or accuracy drops below <x>%\nNext review: <date>"
+        }
+      ]
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Practice",
+      "sub": "One task, one criterion.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "1 · The criterion for your task",
+          "min": "15 min",
+          "texto": "Pick one task for your agent (personal, Jarvis, or company) and fill in the promotion criterion. Define what a serious error is for it.",
+          "pronto": "the profile has the current level, the three numbers to move up, what a serious error is, and the rule for moving down."
+        },
+        {
+          "id": "e2",
+          "titulo": "2 · Simulated conversation with a top score",
+          "min": "10 min",
+          "texto": "Do this lesson's simulated conversation. If you don't reach the top score, read the comments and start over.",
+          "pronto": "you finished with the top score and you can say why \"wrong price\" kept the agent at level 1."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Quick quiz",
+      "sub": "4 questions.",
+      "perguntas": [
+        {
+          "p": "An agent has 120 evaluated runs at level 1, 93% accuracy, and no serious errors for three weeks. Can it move up?",
+          "opcoes": [
+            "Yes, to level 2",
+            "Yes, straight to level 3",
+            "No, it needs 500 runs"
+          ],
+          "certa": 0,
+          "ref": "diagrama",
+          "explica": "It meets all three level 2 criteria (90%+, 50+ evaluated, zero serious errors in 2 weeks). Level 3 requires 95%+ at level 2 and 200 evaluated."
+        },
+        {
+          "p": "An agent at level 3 starts making mistakes because the CRM integration changed. What should you do?",
+          "opcoes": [
+            "Keep it at level 3 and hope for the best",
+            "Move it down to level 2 until it stabilizes",
+            "Shut the agent down for good"
+          ],
+          "certa": 1,
+          "ref": "passos",
+          "explica": "The way back down is part of the cycle. Move down, fix the environment, measure, and move up again when the numbers return."
+        },
+        {
+          "p": "Why separate the severity of an error instead of just counting the accuracy rate?",
+          "opcoes": [
+            "Because getting the tone of a message wrong is not the same as getting an invoice amount wrong",
+            "Because the accuracy rate doesn't matter",
+            "Because the model classifies on its own"
+          ],
+          "certa": 0,
+          "ref": "passos",
+          "explica": "97% accuracy with one invoice error can be worse than 90% with tone errors. That's why every level requires zero serious errors."
+        },
+        {
+          "p": "What is the difference between level 2 and level 3?",
+          "opcoes": [
+            "At level 2 a human approves every action; at level 3 they only review the exceptions",
+            "At level 2 the agent does nothing",
+            "At level 3 there is no human"
+          ],
+          "certa": 0,
+          "ref": "diagrama",
+          "explica": "At level 2 nothing goes out without an OK. At level 3 the common cases go out on their own and the human oversees the exceptions. Even at level 4 there are reports and limits.",
+          "cert": true
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Summary",
+      "itens": [
+        {
+          "t": "Four levels",
+          "texto": "Recommends, executes with approval, executes with exceptions, operates within limits."
+        },
+        {
+          "t": "Numbers to move up",
+          "texto": "90%/50, 95%/200, 98%/500, always with zero serious errors in the period."
+        },
+        {
+          "t": "Moving down is part of it",
+          "texto": "New error, one level down, until it stabilizes."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Going further",
+      "links": [
+        {
+          "t": "Criteria for increasing autonomy (full text)",
+          "href": "https://github.com/inematds/iacultivada/blob/main/conteudo/12-autonomia-progressiva.md",
+          "icone": "arquivo"
+        },
+        {
+          "t": "Package: lead qualifier (profile, scorecard, n8n)",
+          "href": "https://github.com/inematds/iacultivada/tree/main/pacotes/qualificador-de-leads",
+          "icone": "pasta"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "slug": "vida-pessoal",
+  "num": 4,
+  "menu": "Pessoal",
+  "titulo": "Primeiro jardim: a vida pessoal",
+  "titulo_curto": "Vida pessoal",
+  "minutos": 15,
+  "lead": "A maioria usa IA como máquina de perguntas: abre, pergunta, copia, fecha. É contratar um consultor genial e apagar a memória dele toda manhã. Na vida pessoal o cultivo é barato: três ou quatro arquivos de texto e vinte minutos por semana.",
+  "objetivo": "começar o cultivo pessoal com uma função, um arquivo Sobre mim, três regras e a revisão semanal de 20 minutos.",
+  "competencias": ["escrever-contexto-pessoal", "definir-uma-funcao-por-vez", "fazer-revisao-semanal"],
+  "aprende": [
+    {"icone": "usuario", "t": "Escrever o Sobre mim de uma página"},
+    {"icone": "alvo", "t": "Escolher uma função por vez"},
+    {"icone": "relogio", "t": "A revisão semanal de 20 minutos"},
+    {"icone": "calendario", "t": "O plano de 30 dias"}
+  ],
+  "hero_alt": "Pessoa à mesa da cozinha de manhã escrevendo num caderno ao lado do notebook.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "O cultivo pessoal",
+      "sub": "Três arquivos e um hábito. Clique em cada parte.",
+      "nos": [
+        {"icone": "usuario", "titulo": "Você", "sub": "Escolhe uma função", "detalhe": "Um papel por vez: revisor de escrita, treinador de estudo, analista de gastos, planejador da semana. Não \"faz tudo\"."},
+        {"icone": "arquivo", "titulo": "Sobre mim", "sub": "Contexto", "detalhe": "Uma página: quem você é, fase de vida, objetivos do ano, restrições de tempo, dinheiro e saúde, valores e o que você odeia. Uma página boa vale mais que vinte despejadas."},
+        {"icone": "escudo", "titulo": "Regras", "sub": "Três, no começo", "detalhe": "Ex.: \"nunca decida por mim em dinheiro e saúde; apresente opções\", \"seja direta, sem elogio\", \"responda em português\"."},
+        {"icone": "memoria", "titulo": "Memória", "sub": "Ela mantém", "detalhe": "Preferências descobertas, o que já foi tentado, o que funcionou. Você apaga o que deixou de ser verdade."},
+        {"icone": "relogio", "titulo": "Revisão semanal", "sub": "20 minutos", "forte": true, "detalhe": "Ler a memória, escrever três linhas no diário de falhas, corrigir no arquivo e limpar a memória. É o que transforma o chat em cultivo."}
+      ],
+      "volta": "A correção da semana vira regra ou contexto, e a próxima semana parte daí",
+      "legenda": "Quem faz a revisão por oito semanas tem uma IA que não se parece com a de mais ninguém."
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Cinco jardins que rendem rápido",
+      "sub": "Escolha um para começar.",
+      "passos": [
+        {"titulo": "Decisões", "texto": ["Papel: conselheira que não decide. Contexto: seus critérios e decisões passadas com resultado. Regra: sempre apresentar a opção contrária.", "Com o tempo, ela lembra seus próprios padrões: \"da última vez você escolheu o mais barato e se arrependeu\"."]},
+        {"titulo": "Dinheiro", "texto": ["Papel: analista de gastos. Ferramenta: planilha exportada do banco. Regra: nunca mover dinheiro, só mostrar.", "Aparecem categorias e padrões de gasto que você nunca tinha visto."]},
+        {"titulo": "Estudo", "texto": ["Papel: tutora. Exemplos: uma explicação que \"entrou\" e uma que não entrou. Avaliação: ela pergunta, você responde, ela anota onde você trava.", "A memória vira o mapa das suas lacunas."]},
+        {"titulo": "Escrita", "texto": ["Papel: editora com a sua voz. Exemplos: cinco textos seus. Regra: não mudar o tom, só clareza.", "Depois de um mês, o primeiro rascunho sai quase pronto. Saúde e rotina seguem a mesma lógica: sugerir e perguntar ao médico, nunca prescrever."]}
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Modelos para a sua pasta",
+      "sub": "Copie para SOBRE-MIM.md, REGRAS.md e a nota da revisão.",
+      "blocos": [
+        {"rot": "SOBRE-MIM.md", "icone": "usuario", "conteudo": "# Sobre mim — <nome>          revisado em <data>\n\nQuem sou: \nObjetivos deste ano: 1)  2)  3) \nRestrições (tempo, dinheiro, saúde): \nComo gosto de trabalhar: direto, sem elogio, português, listas curtas\nO que odeio: \nDecisões já tomadas (não reabrir): "},
+        {"rot": "REGRAS.md", "icone": "escudo", "conteudo": "# Regras — função: <ex.: revisor de escrita>\n\n1. Nunca decida por mim em dinheiro e saúde; apresente opções.\n2. Seja direta, sem elogio.\n3. Responda em português.\n\n# Nunca\n- dados de terceiros ou senhas neste arquivo"},
+        {"rot": "Revisão semanal (20 min)", "icone": "relogio", "conteudo": "## Revisão — semana de <data>\n1. Li a MEMORIA.md: o que ela anotou de novo?\n2. Três linhas no FALHAS.md: data | o que errou | menor correção | faltou contexto, regra ou exemplo?\n3. Corrigi NO ARQUIVO (não na conversa): \n4. Apaguei da memória o que não é mais verdade: "}
+      ]
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Plano de 30 dias",
+      "sub": "Uma semana por aba.",
+      "passos": [
+        {"titulo": "Semana 1", "texto": ["Escrever o Sobre mim (uma página). Escolher uma função. Definir três regras."]},
+        {"titulo": "Semana 2", "texto": ["Usar todo dia na mesma função. Juntar cinco exemplos bons. Começar o diário de falhas."]},
+        {"titulo": "Semana 3", "texto": ["Primeira revisão semanal de verdade. Editar contexto e regras. Criar o arquivo Memória."]},
+        {"titulo": "Semana 4", "texto": ["Adicionar uma ferramenta (calendário ou planilha). Medir: tempo economizado e quantas vezes refez. Decidir se abre uma segunda função."]}
+      ]
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Prática",
+      "sub": "Esta semana.",
+      "exercicios": [
+        {"id": "e1", "titulo": "1 · Sobre mim e três regras", "min": "25 min", "texto": "Escreva o SOBRE-MIM.md e o REGRAS.md com uma função só. O <a href=\"https://inematds.github.io/iacultivada/kits/\">kit pessoal</a> tem os arquivos com exemplo fictício.", "pronto": "o Sobre mim cabe em uma página, a função está escrita em uma frase e há exatamente três regras."},
+        {"id": "e2", "titulo": "2 · A primeira revisão semanal", "min": "20 min", "dias": 7, "texto": "Use a IA na mesma função durante uma semana, carregando os arquivos no início. No fim, faça a revisão com o modelo acima.", "pronto": "o FALHAS.md tem pelo menos três linhas e pelo menos uma delas virou mudança num arquivo (regra, contexto ou exemplo)."}
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Teste rápido",
+      "sub": "4 perguntas.",
+      "perguntas": [
+        {"p": "Você explicou pela terceira vez que quer respostas em tópicos curtos. O que fazer?", "opcoes": ["Explicar de novo, com mais ênfase", "Escrever uma regra no arquivo", "Trocar de modelo"], "certa": 1, "ref": "codigo", "explica": "Se você explicou a mesma coisa três vezes, é regra faltando. Corrigir na conversa some na próxima sessão."},
+        {"p": "Qual o tamanho certo do Sobre mim?", "opcoes": ["Uma página boa", "Tudo que você tem: vinte páginas", "Uma linha"], "certa": 0, "ref": "diagrama", "explica": "Contexto demais vira entulho. Uma página boa vale mais que vinte despejadas."},
+        {"p": "Na função \"analista de gastos\", qual regra é essencial?", "opcoes": ["Pagar as contas em dia automaticamente", "Nunca mover dinheiro, só mostrar", "Investir o que sobrar"], "certa": 1, "ref": "passos", "explica": "A IA propõe, você decide, especialmente em dinheiro e saúde. Delegar o julgamento é a primeira armadilha."},
+        {"p": "O que entra no arquivo de contexto merece cuidado porque...", "opcoes": ["vai para o provedor do modelo", "fica pesado demais para o computador", "a IA esquece em uma semana"], "certa": 0, "ref": "diagrama", "explica": "Privacidade: o que vai no contexto vai para o provedor. Pense antes de escrever dados de terceiros ou segredos.", "cert": true}
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Resumo",
+      "itens": [
+        {"t": "Uma função", "texto": "Um papel por vez, nunca \"faz tudo\"."},
+        {"t": "Três arquivos", "texto": "Sobre mim, regras e memória, com o diário de falhas ao lado."},
+        {"t": "20 minutos por semana", "texto": "A correção vai para o arquivo, não para a conversa."}
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Para ir além",
+      "links": [
+        {"t": "IA Cultivada na vida pessoal (texto completo)", "href": "https://github.com/inematds/iacultivada/blob/main/conteudo/01-vida-pessoal.md", "icone": "arquivo"},
+        {"t": "Kit pessoal para baixar", "href": "https://inematds.github.io/iacultivada/kits/", "icone": "baixar"}
+      ]
+    }
+  ]
+}

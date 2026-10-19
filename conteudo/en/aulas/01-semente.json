@@ -1,0 +1,308 @@
+{
+  "slug": "semente",
+  "num": 1,
+  "menu": "Concept",
+  "titulo": "The seed and the garden: why AI is cultivated",
+  "titulo_curto": "The seed and the garden",
+  "minutos": 14,
+  "lead": "Nobody writes, line by line, a model's ability to code or plan. The labs create the conditions and the abilities emerge. You do the same on a different scale: the model arrives ready-made, and what you cultivate is the environment around it.",
+  "objetivo": "separate what the lab cultivates (the model) from what you cultivate (the agent) and explain the cycle that makes the agent improve.",
+  "competencias": [
+    "distinguir-modelo-e-agente",
+    "explicar-ciclo-de-cultivo",
+    "reconhecer-limites-da-metafora"
+  ],
+  "aprende": [
+    {
+      "icone": "chip",
+      "t": "Why the model is the seed and doesn't change with use"
+    },
+    {
+      "icone": "camadas",
+      "t": "What you cultivate: the envelope around the model"
+    },
+    {
+      "icone": "seta",
+      "t": "The cycle that turns errors into a better agent"
+    },
+    {
+      "icone": "x",
+      "t": "Where the garden metaphor breaks down"
+    }
+  ],
+  "hero_alt": "A seed germinating in the soil next to a computer chip.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "The cultivation cycle",
+      "sub": "Each turn is a harvest cycle. Click each step.",
+      "nos": [
+        {
+          "icone": "lista",
+          "titulo": "Process",
+          "sub": "What needs to be done",
+          "detalhe": "Everything starts with a real process: qualifying leads, organizing the week, scheduling appointments. Without a defined process, there's nothing to evaluate later."
+        },
+        {
+          "icone": "robo",
+          "titulo": "Agent",
+          "sub": "Model + environment",
+          "detalhe": "The agent is the model (fixed, from the lab) plus the environment you wrote: role, context, tools, rules, examples, and memory.",
+          "itens": [
+            {
+              "icone": "chip",
+              "t": "Model: frozen weights"
+            },
+            {
+              "icone": "arquivo",
+              "t": "Environment: your files"
+            }
+          ]
+        },
+        {
+          "icone": "play",
+          "titulo": "Execution",
+          "sub": "It works",
+          "detalhe": "The agent runs the task with the environment as it stands at that moment. This is where most people stop: they use it, like it or don't, and start over."
+        },
+        {
+          "icone": "check",
+          "titulo": "Result",
+          "sub": "What came out",
+          "detalhe": "What was delivered. It can look good and be wrong: fluent text isn't correct text."
+        },
+        {
+          "icone": "grafico",
+          "titulo": "Evaluation",
+          "sub": "Did it work?",
+          "detalhe": "Someone measures it: right, partial, or wrong, and why. Without evaluation, the agent repeats the same error with the same confidence.",
+          "forte": true
+        },
+        {
+          "icone": "caneta",
+          "titulo": "Feedback",
+          "sub": "Change the file",
+          "detalhe": "The evaluation becomes a concrete change in the environment: a new rule, an example, a limit. In the file, not in the conversation.",
+          "forte": true
+        }
+      ],
+      "volta": "Better agent: the next run starts from an adjusted environment",
+      "legenda": "Before, we programmed the behavior. Now, we program the process that produces the behavior.",
+      "rolagem": true,
+      "rolagem_fim": {
+        "titulo": "What changes from one harvest cycle to the next",
+        "texto": "It's not the model. It's what you noted about where it went wrong and what you adjusted in the environment. The first four steps make the agent work; evaluation and feedback make it improve.",
+        "curto": "What improves isn't the seed. It's the garden."
+      }
+    },
+    {
+      "tipo": "passos",
+      "titulo": "The two levels of cultivation",
+      "sub": "The point almost everyone mixes up.",
+      "passos": [
+        {
+          "titulo": "Level 1",
+          "sub": "The lab cultivates the model",
+          "texto": [
+            "Training, weights, and scale happen at Anthropic, OpenAI, Google, DeepSeek. It costs billions and you don't take part.",
+            "The result is the seed: abilities that emerged from training, some expected, others that surprised even the people who trained it."
+          ]
+        },
+        {
+          "titulo": "Level 2",
+          "sub": "You cultivate the agent",
+          "texto": [
+            "The model arrives ready-made, with its weights frozen. What you cultivate is everything around it: role, context, tools, rules, examples, memory, evaluation, and feedback.",
+            "That envelope is what turns the same model into either a confused intern or a reliable professional."
+          ],
+          "exemplo": {
+            "rot": "Consequence",
+            "texto": "In use, the model doesn't learn on its own. When you say \"my AI got better,\" what improved was the garden. And the garden is yours."
+          }
+        },
+        {
+          "titulo": "Software × cultivation",
+          "sub": "What changes in the work",
+          "texto": [
+            "With traditional software, you write the exact rules and get exactly what was specified; an error is a bug on a single line.",
+            "With cultivated AI, you write the conditions and watch what emerges, and an error calls for a different environment: more context, another example, a new rule."
+          ]
+        },
+        {
+          "titulo": "Your role",
+          "sub": "Management, not execution",
+          "texto": [
+            "You don't need to be better than the AI at the task. You need to know how to create the environment where it produces the right result.",
+            "The work shifts from doing to defining the role, giving context, setting limits, evaluating, and giving feedback. It's people management, applied to systems."
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "video",
+      "titulo": "Video: why your AI repeats the same mistake",
+      "sub": "Ten minutes with Nei on the whole concept, with chapters and captions.",
+      "chave": "iacultivada"
+    },
+    {
+      "tipo": "passos",
+      "titulo": "Where the metaphor breaks down",
+      "sub": "Read this before you get too excited.",
+      "passos": [
+        {
+          "titulo": "It doesn't grow on its own",
+          "texto": [
+            "A plant grows on its own; an agent doesn't. Without evaluation and feedback, it repeats the same mistake forever."
+          ]
+        },
+        {
+          "titulo": "It invents fruit",
+          "texto": [
+            "A plant doesn't invent fruit. An agent can produce a result that looks good and is wrong. That's why evaluation exists."
+          ]
+        },
+        {
+          "titulo": "It takes work",
+          "texto": [
+            "Bad context, a bad example, and a vague rule produce a bad agent. The model is the same as your competitor's; the garden is not."
+          ]
+        },
+        {
+          "titulo": "It's not a conversation",
+          "texto": [
+            "\"Giving feedback\" here means editing the environment, not chatting until it \"understands.\""
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Two templates to start",
+      "sub": "Copy them and use them in the practice below.",
+      "blocos": [
+        {
+          "rot": "Test question for your AI",
+          "icone": "chat",
+          "conteudo": "What do you do differently today compared to last month, and why?\nIf you can't answer with examples, say so clearly."
+        },
+        {
+          "rot": "Note: the correction that keeps repeating",
+          "icone": "arquivo",
+          "conteudo": "# Corrections I keep repeating\n\n| what I explain again | how many times | where it should live (context / rule / example) |\n|---|---|---|\n| e.g.: answer in short bullet points | 4 | rule |\n|  |  |  |"
+        }
+      ]
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Practice",
+      "sub": "Start by measuring where you are.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "1 · Maturity diagnostic",
+          "min": "10 min",
+          "texto": "Open the <a href=\"https://inematds.github.io/iacultivada/diagnostico/\">project diagnostic</a> and answer the eight questions thinking about the AI you use most today.",
+          "pronto": "you wrote down your score, the place to start, and which kit the diagnostic recommended."
+        },
+        {
+          "id": "e2",
+          "titulo": "2 · The correction that keeps repeating",
+          "min": "10 min",
+          "texto": "Think of something you've already explained to the AI three or more times (a format, a tone, a piece of data). Write it in a note: what you keep repeating and which of the eight elements it should live in (context, rule, or example).",
+          "pronto": "the note has the repeated correction and the element where it will live."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Quick quiz",
+      "sub": "4 questions. The explanation appears after you try.",
+      "perguntas": [
+        {
+          "p": "After a month of use, your AI makes fewer mistakes. What changed?",
+          "opcoes": [
+            "The model's weights were adjusted by your conversations",
+            "The environment around the model: context, rules, examples, and memory",
+            "The lab released a new version just for you"
+          ],
+          "certa": 1,
+          "ref": "passos",
+          "explica": "In use, the weights stay frozen. What learns is the system: the files you write and review. The common mistake is thinking the model \"learned from you.\""
+        },
+        {
+          "p": "Which step of the cycle do most people skip?",
+          "opcoes": [
+            "Execution",
+            "Evaluation and feedback",
+            "Process"
+          ],
+          "certa": 1,
+          "ref": "diagrama",
+          "explica": "Using it and starting over is the default. Without measuring the result and feeding the correction back into the environment, the cycle doesn't close and the agent doesn't improve."
+        },
+        {
+          "p": "What does \"giving feedback\" mean in cultivation?",
+          "opcoes": [
+            "Chatting with the AI until it understands",
+            "Editing the environment: a new rule, example, or limit",
+            "Rating the answer with stars"
+          ],
+          "certa": 1,
+          "ref": "passos",
+          "explica": "Feedback is a concrete change to the file. Repeating the explanation in the chat disappears in the next session."
+        },
+        {
+          "p": "Two companies use the same model. Why are the results so different?",
+          "opcoes": [
+            "One paid for a more expensive plan",
+            "The garden around the model is different",
+            "It's luck: AI is unpredictable"
+          ],
+          "certa": 1,
+          "ref": "diagrama",
+          "explica": "The model is available to everyone. The difference lies in the context, rules, examples, and evaluation that each company has built.",
+          "cert": true
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Summary",
+      "itens": [
+        {
+          "t": "Seed and garden",
+          "texto": "The lab cultivates the model; you cultivate the agent."
+        },
+        {
+          "t": "The cycle",
+          "texto": "Process, agent, execution, result, evaluation, feedback, better agent."
+        },
+        {
+          "t": "In the file",
+          "texto": "Feedback is editing the environment, not repeating it in the chat."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Going further",
+      "links": [
+        {
+          "t": "The full concept (Cultivated AI project)",
+          "href": "https://github.com/inematds/iacultivada/blob/main/conteudo/00-conceito.md",
+          "icone": "arquivo"
+        },
+        {
+          "t": "Research: origin of the concept and critiques, with sources",
+          "href": "https://github.com/inematds/iacultivada/blob/main/pesquisa/relatorio-pesquisa.md",
+          "icone": "lupa"
+        },
+        {
+          "t": "Video page with chapters",
+          "href": "https://inematds.github.io/iacultivada/videos/",
+          "icone": "video"
+        }
+      ]
+    }
+  ]
+}

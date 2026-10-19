@@ -1,0 +1,255 @@
+{
+  "slug": "ciclo",
+  "num": 6,
+  "menu": "Cycle",
+  "titulo": "Closing the loop: failure log and observability",
+  "titulo_curto": "Closing the loop",
+  "minutos": 17,
+  "lead": "What isn't observed isn't cultivated. This lesson follows a clinic front-desk agent from its first error to supervised autonomy, and shows the minimum you need to record to replace \"I think it got better\" with \"it improved from 88% to 95%\".",
+  "objetivo": "record each run with the minimum set of fields and turn a real error into a new rule, comparing the result before and after.",
+  "competencias": [
+    "registrar-execucoes",
+    "achar-causa-raiz-de-falha",
+    "comparar-versoes-do-agente"
+  ],
+  "aprende": [
+    {
+      "icone": "caneta",
+      "t": "How an error becomes a permanent rule"
+    },
+    {
+      "icone": "grafico",
+      "t": "Comparing agent versions with numbers"
+    },
+    {
+      "icone": "lista",
+      "t": "Minimum observability: three fields"
+    },
+    {
+      "icone": "lupa",
+      "t": "Finding the error pattern worth fixing first"
+    }
+  ],
+  "hero_alt": "Clinic receptionist checks the appointment schedule on the screen next to an open notebook.",
+  "secoes": [
+    {
+      "tipo": "diagrama",
+      "titulo": "The clinic case, in six stages",
+      "sub": "Scroll to follow along. The numbers are from the case described in the project.",
+      "nos": [
+        {
+          "icone": "pasta",
+          "titulo": "Starting environment",
+          "sub": "Suggests only",
+          "detalhe": "Doctors and specialties, each doctor's hours, procedures and duration, clinic rules, and access to the schedule. The agent only suggests; the receptionist approves each appointment."
+        },
+        {
+          "icone": "x",
+          "titulo": "First failure",
+          "sub": "Week 3",
+          "detalhe": "The agent books 7:30 PM with a doctor who doesn't see patients after 6 PM. The schedule showed \"free,\" but a free schedule slot is not an available doctor. The failure is logged with date, decision, result, and root cause."
+        },
+        {
+          "icone": "caneta",
+          "titulo": "New rule",
+          "sub": "In the environment, not in the conversation",
+          "forte": true,
+          "detalhe": "\"Before suggesting, check the schedule AND the doctor's working hours. Outside working hours, never, even if the schedule shows free.\" Takes effect from the next run onward."
+        },
+        {
+          "icone": "grafico",
+          "titulo": "Evaluation",
+          "sub": "18 of 20",
+          "detalhe": "Of the next 20 interactions, 18 were correct. The 2 failures become two more rules: the procedure's duration must fit in the time slot, and 15 minutes between appointments."
+        },
+        {
+          "icone": "check",
+          "titulo": "Stabilization",
+          "sub": "20 of 20, two weeks",
+          "detalhe": "40 interactions in two weeks: 20/20 in each, zero corrections from the receptionist, response time from 4 minutes to 45 seconds."
+        },
+        {
+          "icone": "seta",
+          "titulo": "Autonomy",
+          "sub": "Runs on its own; a human reviews exceptions",
+          "forte": true,
+          "detalhe": "With the history, the agent starts confirming on its own. The human gets a daily report and reviews only what the agent flagged as an exception: cutoff time, new patient, long procedure."
+        }
+      ],
+      "rolagem": true,
+      "rolagem_fim": {
+        "titulo": "After 2 months",
+        "texto": "Rules: from 5 generic ones to 14 born from real failures. 320 runs logged, 7 failures documented, 97.8% accuracy, version v1.0 → v1.4. The model is the same as on day one; if the clinic switches models, the garden stays.",
+        "curto": "Same model, different garden."
+      }
+    },
+    {
+      "tipo": "passos",
+      "titulo": "The difference between two versions",
+      "sub": "What observability shows (project example, 100 runs in each version).",
+      "passos": [
+        {
+          "titulo": "v1.0 · 88%",
+          "sub": "12 failures, 15 interventions",
+          "texto": [
+            "Three error patterns: outside the professional's hours (5), time slot too short for the procedure (4), and an ambiguous reply about cancellation (3).",
+            "Each pattern produced a new rule: four rules modified."
+          ]
+        },
+        {
+          "titulo": "v1.1 · 95%",
+          "sub": "5 failures, 6 interventions",
+          "texto": [
+            "Patterns 1 and 2 disappeared. Pattern 3 dropped from 3 to 1 occurrence.",
+            "A new pattern showed up: two simultaneous procedures requesting the same exam room. The cycle goes on."
+          ],
+          "exemplo": {
+            "rot": "The investment",
+            "texto": "From 88% to 95% with rules and fixes. Nobody switched the model: they looked at the data and adjusted the environment."
+          }
+        },
+        {
+          "titulo": "What you can decide",
+          "texto": [
+            "Compare versions on the same scenarios. Find patterns (\"70% of errors are long procedures\"). Measure the cost of an error (\"each rescheduling costs R$ 150\"). Decide where to invest first."
+          ]
+        }
+      ]
+    },
+    {
+      "tipo": "codigo",
+      "titulo": "Run log",
+      "sub": "Start with the three fields. The full version comes when the volume calls for it.",
+      "blocos": [
+        {
+          "rot": "EXECUCOES.md · minimum viable",
+          "icone": "lista",
+          "conteudo": "| date | what was asked | what was delivered | did it work? (yes / no / partly) |\n|---|---|---|---|\n|  |  |  |  |"
+        },
+        {
+          "rot": "EXECUCOES.md · full",
+          "icone": "grafico",
+          "conteudo": "| date | agent version | goal | decision made | tool used | time | cost | result | error | human intervention | rating (correct / partial / wrong) | fix applied |\n|---|---|---|---|---|---|---|---|---|---|---|---|\n|  |  |  |  |  |  |  |  |  |  |  |  |"
+        },
+        {
+          "rot": "From failure to rule (log template)",
+          "icone": "caneta",
+          "conteudo": "## Failure <date>\nWhat happened: \nDecision the agent made: \nRoot cause (missing context, rule, example, or tool?): \nSmallest possible fix: \nNew rule (exact text that went into the file): \nAgent version: v1.0 → v1.1\nHow I'll know it worked: next 20 runs, count the hits"
+        }
+      ]
+    },
+    {
+      "tipo": "pratica",
+      "titulo": "Practice",
+      "sub": "One week of observation.",
+      "exercicios": [
+        {
+          "id": "e1",
+          "titulo": "1 · One week of logging",
+          "min": "5 min a day",
+          "dias": 7,
+          "texto": "For the function you chose, log every run in EXECUCOES.md with the three minimum fields.",
+          "pronto": "the file has at least 10 rows and you can state the week's accuracy rate (e.g., 8 out of 10)."
+        },
+        {
+          "id": "e2",
+          "titulo": "2 · A rule born from an error",
+          "min": "20 min",
+          "texto": "Take the failure that repeated most during the week and fill in the \"from failure to rule\" template. Put the rule in the file and bump the version.",
+          "pronto": "the rule is written in the agent's file, the version went up (v1.0 → v1.1), and the next runs are being counted so you can compare."
+        }
+      ]
+    },
+    {
+      "tipo": "quiz",
+      "titulo": "Quick quiz",
+      "sub": "4 questions.",
+      "perguntas": [
+        {
+          "p": "The calendar showed the time slot as free and the agent booked outside the doctor's working hours. What was the root cause?",
+          "opcoes": [
+            "The model is weak",
+            "The calendar wasn't being cross-checked against the doctor's working hours: a missing rule",
+            "The patient asked wrong"
+          ],
+          "certa": 1,
+          "ref": "diagrama",
+          "explica": "A free calendar slot is not an available doctor. The fix was a permanent rule in the environment, not a new model."
+        },
+        {
+          "p": "What is the minimum viable observability?",
+          "opcoes": [
+            "All 12 fields from day one",
+            "What was asked, what was delivered, and whether it worked",
+            "Only the token cost"
+          ],
+          "certa": 1,
+          "ref": "codigo",
+          "explica": "Three fields are enough to calculate accuracy and close the first cycle. More fields come in when the volume calls for it."
+        },
+        {
+          "p": "In v1.1 a new error pattern appeared (exam room conflict). That means that...",
+          "opcoes": [
+            "v1.1 got worse and should be rolled back",
+            "the cycle is working: new pattern, new rule",
+            "the agent has reached the limit"
+          ],
+          "certa": 1,
+          "ref": "passos",
+          "explica": "The old patterns are gone and the rate went up from 88% to 95%. New patterns show up when the old ones get out of the way."
+        },
+        {
+          "p": "After 2 months, what does the clinic have that a competitor can't copy by hiring the same model?",
+          "opcoes": [
+            "The model",
+            "The 14 rules born from failures, the history, and the logs",
+            "The API"
+          ],
+          "certa": 1,
+          "ref": "diagrama",
+          "explica": "The garden belongs to the clinic. If it switches models, the garden stays; whoever copies the model starts from zero.",
+          "cert": true
+        }
+      ]
+    },
+    {
+      "tipo": "resumo",
+      "titulo": "Summary",
+      "itens": [
+        {
+          "t": "Error becomes rule",
+          "texto": "A log with the root cause, the smallest fix, the rule in the file, and a new version."
+        },
+        {
+          "t": "Compare versions",
+          "texto": "Same scenarios, before and after: 88% → 95% without changing the model."
+        },
+        {
+          "t": "Start with three fields",
+          "texto": "Request, delivery, did it work. That already closes the first cycle."
+        }
+      ]
+    },
+    {
+      "tipo": "links",
+      "titulo": "Going further",
+      "links": [
+        {
+          "t": "Full case: clinic customer service agent",
+          "href": "https://github.com/inematds/iacultivada/blob/main/conteudo/09-caso-clinica.md",
+          "icone": "arquivo"
+        },
+        {
+          "t": "Cultivation observability",
+          "href": "https://github.com/inematds/iacultivada/blob/main/conteudo/10-observabilidade.md",
+          "icone": "grafico"
+        },
+        {
+          "t": "Package: customer service triage",
+          "href": "https://github.com/inematds/iacultivada/tree/main/pacotes/triagem-de-atendimento",
+          "icone": "pasta"
+        }
+      ]
+    }
+  ]
+}

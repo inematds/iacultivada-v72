@@ -1,0 +1,186 @@
+{
+  "id": "iacultivada-v72",
+  "lang": "en",
+  "url": "https://inematds.github.io/iacultivada-v72/en/",
+  "nome": "Cultivated AI",
+  "sub": "You don't program it, you cultivate it",
+  "volta": {
+    "t": "Cultivated AI project page",
+    "href": "https://inematds.github.io/iacultivada/"
+  },
+  "lado_card": {
+    "rot": "Ready to download",
+    "t": "Three kits with the five files",
+    "texto": "Personal, Jarvis, and company: agent profile, context, examples, failure log, and review, already structured with a fictional example.",
+    "link": "Open the kits",
+    "href": "https://inematds.github.io/iacultivada/kits/"
+  },
+  "rodape": "INEMA.CLUB · open and free content · INEMA Learning v7.2 format · <a href=\"https://inematds.github.io/iacultivada/\">Cultivated AI project</a> · <a href=\"https://github.com/inematds/iacultivada\">repository with kits, skills, and packages</a> · <a href=\"https://inema.club/\">inema.club</a> · <a href=\"https://www.inema.club/aprender-inteligencia-artificial/\">Guide: how to learn artificial intelligence</a>",
+  "videos": {
+    "iacultivada": {
+      "titulo": "Cultivated AI: why your AI keeps making the same mistake",
+      "duracao": "9 min 54 s",
+      "mp4": "https://github.com/inematds/iacultivada/releases/download/video-v2.0.0/iacultivada-en.mp4",
+      "vtt": "assets/vtt/iacultivada-en.vtt",
+      "poster": "assets/img/iacultivada.jpg",
+      "pagina": "https://inematds.github.io/iacultivada/videos/en/"
+    }
+  },
+  "inicio": {
+    "kicker": "Course · 8 lessons · personal, Jarvis, and company",
+    "titulo": "Cultivated AI: stop repeating the same correction and make your agent get better every week",
+    "lead": "The model arrives ready-made, and it's the same one your competitor has. What improves is the garden around it: role, context, rules, examples, memory, evaluation, and feedback. In eight lessons you build the five files that cultivate, close the loop with the failure log, and decide the agent's autonomy by the numbers.",
+    "cta": "Start with lesson 1",
+    "cta2": {
+      "t": "Take the maturity assessment",
+      "href": "https://inematds.github.io/iacultivada/diagnostico/"
+    },
+    "capa_alt": "Cultivated AI: a greenhouse with seedlings growing and threads of digital light at the roots.",
+    "numeros": [
+      {
+        "v": "8",
+        "t": "elements of cultivation"
+      },
+      {
+        "v": "5",
+        "t": "text files that cultivate"
+      },
+      {
+        "v": "4",
+        "t": "levels of autonomy, raised by evidence"
+      },
+      {
+        "v": "20 min",
+        "t": "per weekly review"
+      }
+    ],
+    "aulas_titulo": "The lessons",
+    "aulas_sub": "Concept, the files, three gardens (personal life, Jarvis, and company), the evaluation cycle, and autonomy by evidence. Each lesson has a practice with \"done when\" and a commented test.",
+    "blocos": [
+      {
+        "t": "Who it's for",
+        "itens": [
+          "People who use AI every day and are tired of explaining the same thing every week.",
+          "People who built (or want to build) a personal assistant, a Jarvis, and expect it to improve.",
+          "Managers who are about to put the first agent into a company process."
+        ]
+      },
+      {
+        "t": "What you'll be able to do",
+        "itens": [
+          "Describe any agent through the eight elements and write its agent profile.",
+          "Keep a failure log and a weekly review: the correction goes into the file, not into the chat.",
+          "Measure accuracy by sampling and decide whether to raise or lower autonomy using numbers.",
+          "Leave with a dated plan for 30 days (personal) or 90 days (company)."
+        ]
+      }
+    ]
+  },
+  "ui": {
+    "pular": "Skip to content",
+    "aulas": "Lessons",
+    "concluido": "completed",
+    "aula": "Lesson",
+    "nesta_aula": "In this lesson, you will learn:",
+    "objetivo": "Goal:",
+    "proxima_aula": "Next lesson",
+    "aula_anterior": "Previous lesson",
+    "voltar_inicio": "Back to the start of the course",
+    "marcar_concluida": "Mark lesson as completed",
+    "dg_dica": "Click each block in the diagram to see what it does.",
+    "copiar": "Copy",
+    "copiado": "Copied",
+    "selo_simulacao": "Simulation: illustrative example",
+    "selo_real": "Example from the repository",
+    "pronto_quando": "Done when:",
+    "fiz": "I did this exercise",
+    "video_pagina": "Video page with script",
+    "pergunta": "Question",
+    "de": "of",
+    "cert_tag": "skill",
+    "correto": "Correct",
+    "errado": "Not this one",
+    "quiz_aguarda": "Choose an option. The explanation appears after your attempt.",
+    "proxima_pergunta": "Next question",
+    "quiz_ver": "See result",
+    "quiz_fim": "Quiz complete",
+    "quiz_total": "You got {a} of {n} right. Get them all right and the lesson is marked as complete.",
+    "aparencia": "Appearance",
+    "tamanho_texto": "Text size",
+    "tema": "Theme",
+    "tema_escuro": "Dark",
+    "tema_papel": "Light paper",
+    "role_dica": "Scroll the page: each step below lights up its part of the diagram.",
+    "pre_requisito": "requires",
+    "ver_aula": "View the lesson",
+    "mapa_dica": "Click an exercise to see what to do and the \"done when\".",
+    "etapas": "Steps",
+    "exercicios": "exercises",
+    "rever": "Review:",
+    "revisar_erradas": "Review the wrong answers",
+    "refazer": "Retake the quiz",
+    "h_semana": "h per week",
+    "data_inicio": "Start date",
+    "ritmo": "Time available",
+    "gerar_plano": "Generate my plan",
+    "baixar_md": "Download plano.md",
+    "baixar_ics": "Download to calendar (.ics)",
+    "ind_estudo": "Study (lessons)",
+    "ind_pratica": "Self-reported practice",
+    "ind_nota": "Practice = exercises you marked as done. Proof comes in the certification exam.",
+    "estudo": {
+      "titulo": "Your study",
+      "continuar": "Pick up where I left off",
+      "comecar": "Start with lesson 1",
+      "cta_continuar": "Continue lesson {n}",
+      "hoje": "today",
+      "ontem": "yesterday",
+      "ha_dias": "{n} days ago",
+      "desempenho": "Quiz performance",
+      "notas": "My notes",
+      "dados": "Copy my data",
+      "sem_testes": "No quiz taken yet. The quiz is at the end of each lesson.",
+      "nao_fez": "quiz not taken yet",
+      "ultimo": "Latest",
+      "melhor": "Best",
+      "tentativas": "attempts",
+      "tentativa": "attempt",
+      "tudo_certo": "You got everything right on the latest quiz.",
+      "rever": "To review",
+      "resposta": "Correct answer:",
+      "ir_teste": "Retake the quiz",
+      "sem_notas": "No notes yet. In the lesson, select a passage of text and tap Highlight or Note.",
+      "so_marcado": "(highlight only)",
+      "marcar": "Highlight",
+      "anotar": "Note",
+      "salvar": "Save",
+      "apagar": "Remove highlight",
+      "fechar": "Close",
+      "nota_ph": "Write your note about this passage…",
+      "um_bloco": "Highlight within a single paragraph only.",
+      "nao_marca": "This passage can't be highlighted.",
+      "dados_exp": "Your progress, your notes, and your quiz scores are stored only in this browser. Download a copy (.json) to keep or to continue on another computer or browser; there, load the copy. Loading adds to what already exists and doesn't erase anything.",
+      "exportar": "Download copy",
+      "importar": "Load copy",
+      "import_ok": "Copy loaded ({n} items). Refreshing the page…",
+      "import_erro": "File not recognized. Nothing was changed.",
+      "import_outro": "This copy is from a different course. Nothing was changed.",
+      "export_ok": "Copy downloaded."
+    },
+    "conv_dica": "Choose your answer. The comment appears right after, and the conversation continues based on your choice.",
+    "conv_voce": "You",
+    "conv_escolha": "Your answer",
+    "conv_boa": "Good choice",
+    "conv_meio": "Room to improve",
+    "conv_ruim": "Weak choice",
+    "conv_fim": "End of the conversation",
+    "conv_placar": "You scored {p} out of {m} possible points.",
+    "conv_licao": "Lesson:",
+    "conv_recomecar": "Restart the conversation",
+    "conv_feita": "Your best score: {p} out of {m} points.",
+    "comecar": "Start the lesson",
+    "nesta_vai": "In this lesson you will",
+    "trocar_tema": "Switch light/dark theme"
+  },
+  "icone": "camadas"
+}
